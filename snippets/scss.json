@@ -1,0 +1,24 @@
+{
+	"@debug __MESSAGE__;":							{ "prefix": "@d1",		"body": ["@debug ${0:message};"], "description": "" },
+	"@warn __MESSAGE__;":							{ "prefix": "@w1",		"body": ["@warn ${0:message};"], "description": "" },
+	"@error __MESSAGE__;":							{ "prefix": "@e1",		"body": ["@error ${0:message};"], "description": "" },
+	
+	"if()":											{ "prefix": "i$3",		"body": ["if(${1:condition}, ${2:true}, ${0:false})"], "description": "" },
+	"@if {}":										{ "prefix": "@i_",		"body": ["@if ${0:condition} {", "\t", "}"], "description": "" },
+	"@if {} @else if {}":							{ "prefix": "@ei_",		"body": ["@else if ${0:condition} {", "\t", "}"], "description": "" },
+	"@else {}":										{ "prefix": "@e_",		"body": ["@else {", "\t$0", "}"], "description": "" },
+	
+	"@for from through {}":							{ "prefix": "@fft_",	"body": ["@for ${1:$i} from ${2:1} through ${0:$end} {", "\t", "}"], "description": "" },
+	"@each in {}":									{ "prefix": "@ei_",		"body": ["@each ${1:$item} in ${0:$items} {", "\t", "}"], "description": "" },
+	"@while {}":									{ "prefix": "@w_",		"body": ["@while ${0:condition} {", "\t", "}"], "description": "" },
+	
+	"@content;":									{ "prefix": "@c1",		"body": ["@content;"], "description": "" },
+	"@extend ;":									{ "prefix": "@e1",		"body": ["@extend ${0:name};"], "description": "" },
+	"@include ()":									{ "prefix": "@i$",		"body": ["@include ${0:name}();"], "description": "" },
+	"@include {}":									{ "prefix": "@i_",		"body": ["@include ${1:name} {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"@include () {}":								{ "prefix": "@i$_",		"body": ["@include ${1:name}() {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"@mixin () {}":									{ "prefix": "@m$_",		"body": ["@mixin ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	
+	"@function () {}":								{ "prefix": "@f_",		"body": ["@function ${1:name} ($2) {", "\t", "\t$0", "\t", "}"], "description": "" },
+	"@return ;":									{ "prefix": "@r",		"body": ["@return "], "description": "" }
+}
