@@ -2,7 +2,7 @@
     "name": "l13-css-snippets",
 	"displayName": "L13 CSS Snippets",
 	"description": "Snippets for CSS and SCSS",
-	"version": "0.13.1",
+	"version": "0.14.0",
     "publisher": "L13RARY",
 	"preview": true,
     "license": "SEE LICENCE IN LICENCE.md",
@@ -45,5 +45,8 @@
 				"path": "./snippets/scss.json"
 			}
         ]
-    }
+    },
+	"scripts": {
+		"build": "node ./src/manual.js"
+	}
 }
