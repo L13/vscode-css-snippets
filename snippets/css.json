@@ -442,6 +442,17 @@
 	"clip: rect(0, 0, 0, 0);":					{ "prefix": "cr4",		"body": ["clip: rect(${1:0}, ${2:0}, ${3:0}, ${0:0});"], "description": "" },
 	
 	"color: #000000;":							{ "prefix": "c_",		"body": ["color: ${0:#000000};"], "description": "" },
+		
+	"content: '';":								{ "prefix": "c",		"body": ["content: '$0';"], "description": "" },
+	"content: attr();":							{ "prefix": "ca",		"body": ["content: attr($0);"], "description": "" },
+	"content: close-quote;":					{ "prefix": "ccq",		"body": ["content: close-quote;"], "description": "" },
+	"content: counter;":						{ "prefix": "cc",		"body": ["content: counter;"], "description": "" },
+	"content: no-close-quote;":					{ "prefix": "cncq",		"body": ["content: no-close-quote;"], "description": "" },
+	"content: no-open-quote;":					{ "prefix": "cnoq",		"body": ["content: no-open-quote;"], "description": "" },
+	"content: none;":							{ "prefix": "cn",		"body": ["content: none;"], "description": "" },
+	"content: normal;":							{ "prefix": "cn",		"body": ["content: normal;"], "description": "" },
+	"content: open-quote;":						{ "prefix": "coq",		"body": ["content: open-quote;"], "description": "" },
+	"content: url();":							{ "prefix": "cu",		"body": ["content: url($0);"], "description": "" },
 	
 	"-prefix-column-count: 0;":					{ "prefix": "-cc1",		"body": ["-moz-column-count: ${0:0};", "-webkit-column-count: ${0:0};", "column-count: ${0:0};"], "description": "" },
 	"column-count: 0;":							{ "prefix": "cc1",		"body": ["column-count: ${0:0};"], "description": "" },

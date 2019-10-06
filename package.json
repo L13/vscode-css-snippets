@@ -47,6 +47,6 @@
         ]
     },
 	"scripts": {
-		"build": "node ./src/manual.js"
+		"build": "node ./src/index.js"
 	}
 }
