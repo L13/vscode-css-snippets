@@ -5,6 +5,7 @@ All notable changes to the "L13 CSS Snippets" extension will be documented in th
 
 ### Added
 - Added complete snippet list as markdown.
+- Added property "content".
 
 ## [0.13.1] - 2019-08-25
 

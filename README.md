@@ -4,6 +4,11 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 
 This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
 
+## What's new in L13 CSS Snippets 0.14.0
+
+- Added complete snippet list as markdown.
+- Added property "content".
+
 ## Index
 
 1. [Introduction](#Introduction)
