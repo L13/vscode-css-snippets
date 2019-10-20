@@ -2,6 +2,13 @@
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
+This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
+
+## What's new in L13 CSS Snippets 0.14.0
+
+- Added complete snippet list as markdown.
+- Added property "content".
+
 ## Index
 
 1. [Introduction](#Introduction)
@@ -16,7 +23,7 @@ The idea of those snippets is to create a property instantly based on some simpl
 
 Only a few prefixes are twice, because the rules are matching different properties like `fs1` -> `flex-shrink: 1;` and `font-size: 0;`. Then you have to pick the right one.
 
-__The following prefixes are just examples to explain the rules.__ To see the complete list, please visit https://github.com/L13/vscode-css-snippets/tree/master/snippets . If a property or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-css-snippets/issues) and make a suggestion.
+__The following prefixes are just examples to explain the rules.__ To see the complete list, please visit [SNIPPETS.md](https://github.com/L13/vscode-css-snippets/blob/master/SNIPPETS.md). If a property or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-css-snippets/issues) and make a suggestion.
 
 ## Shortcut rules for CSS snippets
 
