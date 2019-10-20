@@ -379,6 +379,16 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `ca` | `clip: auto;` |
 | `cr4` | `clip: rect(${1:0}, ${2:0}, ${3:0}, ${0:0});` |
 | `c_` | `color: ${0:#000000};` |
+| `c` | `content: '$0';` |
+| `ca` | `content: attr($0);` |
+| `ccq` | `content: close-quote;` |
+| `cc` | `content: counter;` |
+| `cncq` | `content: no-close-quote;` |
+| `cnoq` | `content: no-open-quote;` |
+| `cn` | `content: none;` |
+| `cn` | `content: normal;` |
+| `coq` | `content: open-quote;` |
+| `cu` | `content: url($0);` |
 | `-cc1` | `-moz-column-count: ${0:0}; -webkit-column-count: ${0:0}; column-count: ${0:0};` |
 | `cc1` | `column-count: ${0:0};` |
 | `-cca` | `-moz-column-count: auto; -webkit-column-count: auto; column-count: auto;` |
