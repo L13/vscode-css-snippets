@@ -154,7 +154,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `biu` | `background-image: url('$0');` |
 | `bobb` | `background-origin: border-box;` |
 | `bopb` | `background-origin: padding-box;` |
-| `bp2` | `background-position: ${1:0} ${2:0};` |
+| `bp2` | `background-position: ${1:0} ${0:0};` |
 | `bpcb` | `background-position: center bottom;` |
 | `bpcc` | `background-position: center center;` |
 | `bpct` | `background-position: center top;` |
