@@ -175,7 +175,7 @@
 	"background-origin: border-box;":			{ "prefix": "bobb",		"body": ["background-origin: border-box;"], "description": "" },
 	"background-origin: padding-box;":			{ "prefix": "bopb",		"body": ["background-origin: padding-box;"], "description": "" },
 	
-	"background-position: 0 0;":				{ "prefix": "bp2",		"body": ["background-position: ${1:0} ${2:0};"], "description": "" },
+	"background-position: 0 0;":				{ "prefix": "bp2",		"body": ["background-position: ${1:0} ${0:0};"], "description": "" },
 	"background-position: center bottom;":		{ "prefix": "bpcb",		"body": ["background-position: center bottom;"], "description": "" },
 	"background-position: center center;":		{ "prefix": "bpcc",		"body": ["background-position: center center;"], "description": "" },
 	"background-position: center top;":			{ "prefix": "bpct",		"body": ["background-position: center top;"], "description": "" },
