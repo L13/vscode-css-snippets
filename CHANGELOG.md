@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the "L13 CSS Snippets" extension will be documented in this file.
 
+## [0.14.1] - 2020-04-19
+
+### Fixed
+- Fixed tab stop in `background-position: 0 0;`
+
 ## [0.14.0] - 2019-10-20
 
 ### Added
