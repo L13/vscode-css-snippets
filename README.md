@@ -1,12 +1,10 @@
-# L13 CSS and SCSS Snippets
+# CSS and SCSS Snippets
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
-This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
+## What's new in CSS Snippets 0.15.0
 
-## What's new in L13 CSS Snippets 0.14.1
-
-- Fixed tab stop in `background-position: 0 0;`
+- Added values `round` and `space` for `background-repeat`.
 
 ## Index
 
@@ -146,3 +144,5 @@ Please have the following keyboard shortcuts always in mind, because these are f
 * `DownArrow` - Move the caret down one line.
 * `Ctrl + Enter` - Insert line below, even if the caret is in the middle of a line.
 * `Ctrl + Shift + Enter` - Insert line above, even if the caret is in the middle of a line.
+
+> This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
