@@ -8,11 +8,12 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 
 ## Index
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 1. [Shortcut rules for CSS snippets](#shortcut-rules-for-css-snippets)
 1. [Shortcut rules for SCSS snippets](#shortcut-rules-for-scss-snippets)
 1. [Recommended Settings](#recommended-settings)
 1. [Recommended Keyboard Shortcuts](#recommended-keyboard-shortcuts)
+1. [Recommended Extensions](#recommended-extensions)
 
 ## Introduction
 
@@ -145,4 +146,6 @@ Please have the following keyboard shortcuts always in mind, because these are f
 * `Ctrl + Enter` - Insert line below, even if the caret is in the middle of a line.
 * `Ctrl + Shift + Enter` - Insert line above, even if the caret is in the middle of a line.
 
-> This extension is part of the [L13 Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack).
+## Recommended Extensions
+
+- [Extension Pack](https://marketplace.visualstudio.com/items?itemName=L13RARY.l13-extension-pack)
