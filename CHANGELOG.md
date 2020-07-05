@@ -1,5 +1,5 @@
 # Change Log
-All notable changes to the "CSS Snippets" extension will be documented in this file.
+All notable changes to the "CSS and SCSS Snippets" extension will be documented in this file.
 
 ## [0.15.0] - 2020-07-05
 
