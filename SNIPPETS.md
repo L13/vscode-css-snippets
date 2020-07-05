@@ -166,8 +166,12 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bprt` | `background-position: right top;` |
 | `brnr` | `background-repeat: no-repeat;` |
 | `brr` | `background-repeat: repeat;` |
+| `brr` | `background-repeat: round;` |
+| `brrs` | `background-repeat: round space;` |
 | `brrx` | `background-repeat: repeat-x;` |
 | `brry` | `background-repeat: repeat-y;` |
+| `brs` | `background-repeat: space;` |
+| `brsr` | `background-repeat: space round;` |
 | `-bs2` | `-moz-background-size: ${1:0} ${0:0}; -o-background-size: ${1:0} ${0:0}; -webkit-background-size: ${1:0} ${0:0}; background-size: ${1:0} ${0:0};` |
 | `bs2` | `background-size: ${1:0} ${0:0};` |
 | `-bsa` | `-moz-background-size: auto; -o-background-size: auto; -webkit-background-size: auto; background-size: auto;` |

@@ -1,5 +1,13 @@
 # Change Log
-All notable changes to the "L13 CSS Snippets" extension will be documented in this file.
+All notable changes to the "CSS Snippets" extension will be documented in this file.
+
+## [0.15.0] - 2020-07-05
+
+### Added
+- Added values `round` and `space` for `background-repeat`.
+
+### Changed
+- Changed display name from `L13 CSS Snippets` to `CSS and SCSS Snippets`.
 
 ## [0.14.1] - 2020-04-19
 
