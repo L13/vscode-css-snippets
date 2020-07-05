@@ -188,8 +188,12 @@
 	
 	"background-repeat: no-repeat;":			{ "prefix": "brnr",		"body": ["background-repeat: no-repeat;"], "description": "" },
 	"background-repeat: repeat;":				{ "prefix": "brr",		"body": ["background-repeat: repeat;"], "description": "" },
+	"background-repeat: round;":				{ "prefix": "brr",		"body": ["background-repeat: round;"], "description": "" },
+	"background-repeat: round space;":			{ "prefix": "brrs",		"body": ["background-repeat: round space;"], "description": "" },
 	"background-repeat: repeat-x;":				{ "prefix": "brrx",		"body": ["background-repeat: repeat-x;"], "description": "" },
 	"background-repeat: repeat-y;":				{ "prefix": "brry",		"body": ["background-repeat: repeat-y;"], "description": "" },
+	"background-repeat: space;":				{ "prefix": "brs",		"body": ["background-repeat: space;"], "description": "" },
+	"background-repeat: space round;":			{ "prefix": "brsr",		"body": ["background-repeat: space round;"], "description": "" },
 	
 	"-prefix-background-size: 0 0;":			{ "prefix": "-bs2",		"body": ["-moz-background-size: ${1:0} ${0:0};", "-o-background-size: ${1:0} ${0:0};", "-webkit-background-size: ${1:0} ${0:0};", "background-size: ${1:0} ${0:0};"], "description": "" },
 	"background-size: 0 0;":					{ "prefix": "bs2",		"body": ["background-size: ${1:0} ${0:0};"], "description": "" },
