@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to the "CSS and SCSS Snippets" extension will be documented in this file.
 
+## [0.16.0] - 2021-05-26
+
+### Added
+- Added `pointer-events` and `position: sticky;` for CSS.
+- Added `@forward` `@use` and `@at-root` for SCSS.
+
+### Fixed
+- Fixed some snippets.
+
 ## [0.15.0] - 2020-07-05
 
 ### Added

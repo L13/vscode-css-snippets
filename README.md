@@ -2,9 +2,10 @@
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
-## What's new in CSS Snippets 0.15.0
+## What's new in CSS Snippets 0.16.0
 
-- Added values `round` and `space` for `background-repeat`.
+- Added `pointer-events` and `position: sticky;` for CSS.
+- Added `@forward` `@use` and `@at-root` for SCSS.
 
 ## Index
 

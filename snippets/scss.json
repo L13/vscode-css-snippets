@@ -1,8 +1,11 @@
 {
-	"@debug __MESSAGE__;":							{ "prefix": "@d1",		"body": ["@debug ${0:message};"], "description": "" },
-	"@warn __MESSAGE__;":							{ "prefix": "@w1",		"body": ["@warn ${0:message};"], "description": "" },
-	"@error __MESSAGE__;":							{ "prefix": "@e1",		"body": ["@error ${0:message};"], "description": "" },
+	"@debug;":										{ "prefix": "@d1",		"body": ["@debug ${0:message};"], "description": "" },
+	"@warn;":										{ "prefix": "@w1",		"body": ["@warn ${0:message};"], "description": "" },
+	"@error;":										{ "prefix": "@e1",		"body": ["@error ${0:message};"], "description": "" },
 	
+	"@forward '';":									{ "prefix": "@f1",		"body": ["@forward '$0';"], "description": "" },
+	"@use '';":										{ "prefix": "@u1",		"body": ["@use '$0';"], "description": "" },
+		
 	"if()":											{ "prefix": "i$3",		"body": ["if(${1:condition}, ${2:true}, ${0:false})"], "description": "" },
 	"@if {}":										{ "prefix": "@i_",		"body": ["@if ${0:condition} {", "\t", "}"], "description": "" },
 	"@if {} @else if {}":							{ "prefix": "@ei_",		"body": ["@else if ${0:condition} {", "\t", "}"], "description": "" },
@@ -12,6 +15,7 @@
 	"@each in {}":									{ "prefix": "@ei_",		"body": ["@each ${1:$item} in ${0:$items} {", "\t", "}"], "description": "" },
 	"@while {}":									{ "prefix": "@w_",		"body": ["@while ${0:condition} {", "\t", "}"], "description": "" },
 	
+	"@at-root {}":									{ "prefix": "@ar_",		"body": ["@at-root$1 {", "\t$0", "}"], "description": "" },
 	"@content;":									{ "prefix": "@c1",		"body": ["@content;"], "description": "" },
 	"@extend ;":									{ "prefix": "@e1",		"body": ["@extend ${0:name};"], "description": "" },
 	"@include ()":									{ "prefix": "@i$",		"body": ["@include ${0:name}();"], "description": "" },
