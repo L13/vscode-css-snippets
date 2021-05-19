@@ -5,7 +5,7 @@ All notable changes to the "CSS and SCSS Snippets" extension will be documented 
 
 ### Added
 - Added `pointer-events` and `position: sticky;` for CSS.
-- Added `@forward` `@use` and `@at-root` for SCSS.
+- Added `@forward`, `@use` and `@at-root` for SCSS.
 
 ### Fixed
 - Fixed some snippets.

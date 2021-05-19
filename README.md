@@ -5,7 +5,7 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 ## What's new in CSS Snippets 0.16.0
 
 - Added `pointer-events` and `position: sticky;` for CSS.
-- Added `@forward` `@use` and `@at-root` for SCSS.
+- Added `@forward`, `@use` and `@at-root` for SCSS.
 
 ## Index
 
