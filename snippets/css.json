@@ -761,7 +761,7 @@
 	"list-style: none;":						{ "prefix": "lsn",		"body": ["list-style: none;"], "description": "" },
 	
 	"list-style-image: none;":					{ "prefix": "lsin",		"body": ["list-style-image: none;"], "description": "" },
-	"list-style-image: url(...);":				{ "prefix": "lsiu",		"body": ["list-style-image: url($1);"], "description": "" },
+	"list-style-image: url(...);":				{ "prefix": "lsiu",		"body": ["list-style-image: url($0);"], "description": "" },
 	
 	"list-style-position: inside;":				{ "prefix": "lspi",		"body": ["list-style-position: inside;"], "description": "" },
 	"list-style-position: outside;":			{ "prefix": "lspo",		"body": ["list-style-position: outside;"], "description": "" },
@@ -825,7 +825,7 @@
 	"outline: ridge 0 #000000;":				{ "prefix": "or1_",		"body": ["outline: ridge ${1:0} ${0:#000000};"], "description": "" },
 	"outline: solid 0 #000000;":				{ "prefix": "os1_",		"body": ["outline: solid ${1:0} ${0:#000000};"], "description": "" },
 	
-	"outline-color: #000000;":					{ "prefix": "oc_",		"body": ["outline: ${0:#000000};"], "description": "" },
+	"outline-color: #000000;":					{ "prefix": "oc_",		"body": ["outline-color: ${0:#000000};"], "description": "" },
 	
 	"outline-offset: 0;":						{ "prefix": "oo1",		"body": ["outline-offset: ${0:0};"], "description": "" },
 	
@@ -883,6 +883,17 @@
 	
 	"page-break-inside: auto;":					{ "prefix": "pbia",		"body": ["page-break-inside: auto;"], "description": "" },
 	"page-break-inside: avoid;":				{ "prefix": "pbia",		"body": ["page-break-inside: avoid;"], "description": "" },
+		
+	"pointer-events: all;":						{ "prefix": "pea",		"body": ["pointer-events: all;"], "description": "" },
+	"pointer-events: auto;":					{ "prefix": "pea",		"body": ["pointer-events: auto;"], "description": "" },
+	"pointer-events: fill;":					{ "prefix": "pef",		"body": ["pointer-events: fill;"], "description": "" },
+	"pointer-events: none;":					{ "prefix": "pen",		"body": ["pointer-events: none;"], "description": "" },
+	"pointer-events: painted;":					{ "prefix": "pep",		"body": ["pointer-events: painted;"], "description": "" },
+	"pointer-events: stroke;":					{ "prefix": "pes",		"body": ["pointer-events: stroke;"], "description": "" },
+	"pointer-events: visible;":					{ "prefix": "pev",		"body": ["pointer-events: visible;"], "description": "" },
+	"pointer-events: visibleFill;":				{ "prefix": "pevF",		"body": ["pointer-events: visibleFill;"], "description": "" },
+	"pointer-events: visiblePainted;":			{ "prefix": "pevP",		"body": ["pointer-events: visiblePainted;"], "description": "" },
+	"pointer-events: visibleStroke;":			{ "prefix": "pevS",		"body": ["pointer-events: visibleStroke;"], "description": "" },
 	
 	"-prefix-perspective: 0;":					{ "prefix": "-p1",		"body": ["-moz-perspective: ${0:0};", "-webkit-perspective: ${0:0};", "perspective: ${0:0};"], "description": "" },
 	"perspective: 0;":							{ "prefix": "p1",		"body": ["perspective: ${0:0};"], "description": "" },
@@ -914,6 +925,7 @@
 	"position: fixed;":							{ "prefix": "pf",		"body": ["position: fixed;"], "description": "" },
 	"position: relative;":						{ "prefix": "pr",		"body": ["position: relative;"], "description": "" },
 	"position: static;":						{ "prefix": "ps",		"body": ["position: static;"], "description": "" },
+	"position: sticky;":						{ "prefix": "ps",		"body": ["position: sticky;"], "description": "" },
 	
 	"quotes: none;":							{ "prefix": "qn",		"body": ["quotes: none;"], "description": "" },
 	"quotes: '«' '»';":							{ "prefix": "q",		"body": ["quotes: '«' '»';"], "description": "" },
@@ -1093,8 +1105,8 @@
 	"visibility: visible;":						{ "prefix": "vv",		"body": ["visibility: visible;"], "description": "" },
 	
 	"white-space: normal;":						{ "prefix": "wsn",		"body": ["white-space: normal;"], "description": "" },
-	"white-space: pre;":						{ "prefix": "wsp",		"body": ["white-space: pre;"], "description": "" },
 	"white-space: nowrap;":						{ "prefix": "wsn",		"body": ["white-space: nowrap;"], "description": "" },
+	"white-space: pre;":						{ "prefix": "wsp",		"body": ["white-space: pre;"], "description": "" },
 	"white-space: pre-line;":					{ "prefix": "wspl",		"body": ["white-space: pre-line;"], "description": "" },
 	"white-space: pre-wrap;":					{ "prefix": "wspw",		"body": ["white-space: pre-wrap;"], "description": "" },
 	
@@ -1112,5 +1124,5 @@
 	"word-wrap: normal;":						{ "prefix": "wwn",		"body": ["word-wrap: normal;"], "description": "" },
 	
 	"z-index: 0;":								{ "prefix": "zi1",		"body": ["z-index: ${0:0};"], "description": "" },
-	"z-index: auto;":							{ "prefix": "zia",		"body": ["z-index: auto;"], "description": "o;"}
+	"z-index: auto;":							{ "prefix": "zia",		"body": ["z-index: auto;"], "description": ""}
 }
