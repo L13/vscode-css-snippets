@@ -658,7 +658,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `lhn` | `line-height: normal;` |
 | `lsn` | `list-style: none;` |
 | `lsin` | `list-style-image: none;` |
-| `lsiu` | `list-style-image: url($1);` |
+| `lsiu` | `list-style-image: url($0);` |
 | `lspi` | `list-style-position: inside;` |
 | `lspo` | `list-style-position: outside;` |
 | `lsta` | `list-style-type: armenian;` |
@@ -706,7 +706,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `oo1_` | `outline: outset ${1:0} ${0:#000000};` |
 | `or1_` | `outline: ridge ${1:0} ${0:#000000};` |
 | `os1_` | `outline: solid ${1:0} ${0:#000000};` |
-| `oc_` | `outline: ${0:#000000};` |
+| `oc_` | `outline-color: ${0:#000000};` |
 | `oo1` | `outline-offset: ${0:0};` |
 | `osd` | `outline-style: dashed;` |
 | `osd` | `outline-style: dotted;` |
@@ -750,6 +750,16 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `pbbr` | `page-break-before: right;` |
 | `pbia` | `page-break-inside: auto;` |
 | `pbia` | `page-break-inside: avoid;` |
+| `pea` | `pointer-events: all;` |
+| `pea` | `pointer-events: auto;` |
+| `pef` | `pointer-events: fill;` |
+| `pen` | `pointer-events: none;` |
+| `pep` | `pointer-events: painted;` |
+| `pes` | `pointer-events: stroke;` |
+| `pev` | `pointer-events: visible;` |
+| `pevF` | `pointer-events: visibleFill;` |
+| `pevP` | `pointer-events: visiblePainted;` |
+| `pevS` | `pointer-events: visibleStroke;` |
 | `-p1` | `-moz-perspective: ${0:0}; -webkit-perspective: ${0:0}; perspective: ${0:0};` |
 | `p1` | `perspective: ${0:0};` |
 | `-pn` | `-moz-perspective: none; -webkit-perspective: none; perspective: none;` |
@@ -778,6 +788,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `pf` | `position: fixed;` |
 | `pr` | `position: relative;` |
 | `ps` | `position: static;` |
+| `ps` | `position: sticky;` |
 | `qn` | `quotes: none;` |
 | `q` | `quotes: '«' '»';` |
 | `-ri` | `-moz-resize: both; resize: both;` |
@@ -931,8 +942,8 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `vh` | `visibility: hidden;` |
 | `vv` | `visibility: visible;` |
 | `wsn` | `white-space: normal;` |
-| `wsp` | `white-space: pre;` |
 | `wsn` | `white-space: nowrap;` |
+| `wsp` | `white-space: pre;` |
 | `wspl` | `white-space: pre-line;` |
 | `wspw` | `white-space: pre-wrap;` |
 | `w1` | `width: ${0:0};` |
@@ -954,6 +965,8 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@d1` | `@debug ${0:message};` |
 | `@w1` | `@warn ${0:message};` |
 | `@e1` | `@error ${0:message};` |
+| `@f1` | `@forward '$0';` |
+| `@u1` | `@use '$0';` |
 | `i$3` | `if(${1:condition}, ${2:true}, ${0:false})` |
 | `@i_` | `@if ${0:condition} {  }` |
 | `@ei_` | `@else if ${0:condition} {  }` |
@@ -961,6 +974,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@fft_` | `@for ${1:$i} from ${2:1} through ${0:$end} {  }` |
 | `@ei_` | `@each ${1:$item} in ${0:$items} {  }` |
 | `@w_` | `@while ${0:condition} {  }` |
+| `@ar_` | `@at-root$1 { $0 }` |
 | `@c1` | `@content;` |
 | `@e1` | `@extend ${0:name};` |
 | `@i$` | `@include ${0:name}();` |

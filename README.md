@@ -2,9 +2,10 @@
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
-## What's new in CSS Snippets 0.15.0
+## What's new in CSS Snippets 0.16.0
 
-- Added values `round` and `space` for `background-repeat`.
+- Added `pointer-events` and `position: sticky;` for CSS.
+- Added `@forward`, `@use` and `@at-root` for SCSS.
 
 ## Index
 
@@ -80,8 +81,8 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 
 | Prefix  | Snippet |
 | -------:| ------- |
-| `r$3`   | <b>r</b>gb<b>(0, 0, 0)</b>; |
-| `r$4`   | <b>r</b>gba<b>(0, 0, 0, 1)</b>; |
+| `r$3`   | <b>r</b>gb<b>(0, 0, 0)</b> |
+| `r$4`   | <b>r</b>gba<b>(0, 0, 0, 1)</b> |
 
 ## Shortcut rules for SCSS snippets
 
@@ -106,7 +107,7 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | `@i$`   | <b>@i</b>nclude NAME <b>()</b>; |
 | `@i$_`  | <b>@i</b>nclude NAME <b>()</b> <b>{</b> ... <b>}</b>; |
 
-### 5. The number "1" defines a one liner.
+### 5. The number "1" defines a one line snippet.
 
 | Prefix  | Snippet |
 | -------:| ------- |
