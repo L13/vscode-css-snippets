@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the "CSS and SCSS Snippets" extension will be documented in this file.
 
+## [0.17.0] - 2023-04-02
+
+### Changed
+- Added `l13CSSSnippets.useFunctionBlockPadding` to enable or disable empty lines in function block scopes.
+
 ## [0.16.0] - 2021-05-26
 
 ### Added

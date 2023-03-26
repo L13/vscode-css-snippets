@@ -2,10 +2,9 @@
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
-## What's new in CSS Snippets 0.16.0
+## What's new in CSS Snippets 0.17.0
 
-- Added `pointer-events` and `position: sticky;` for CSS.
-- Added `@forward`, `@use` and `@at-root` for SCSS.
+- Added `l13SHSnippets.useFunctionBlockPadding` to enable or disable empty lines in function block scopes.
 
 ## Index
 

@@ -1,10 +1,10 @@
 {
-    "name": "l13-css-snippets",
+	"name": "l13-css-snippets",
 	"displayName": "CSS and SCSS Snippets",
 	"description": "Snippets for CSS and SCSS",
-	"version": "0.16.0",
-    "publisher": "L13RARY",
-    "license": "SEE LICENCE IN LICENCE.md",
+	"version": "0.17.0",
+	"publisher": "L13RARY",
+	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/l13/vscode-css-snippets/blob/master/README.md",
 	"repository": {
 		"type": "git",
@@ -13,24 +13,35 @@
 	"bugs": {
 		"url": "https://github.com/l13/vscode-css-snippets/issues"
 	},
-    "icon": "images/icon.png",
+	"icon": "images/icon.png",
 	"galleryBanner": {
 		"color": "#232323",
 		"theme": "dark"
 	},
-    "engines": {
-        "vscode": "^1.32.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Snippets"
+	],
 	"keywords": [
 		"css",
 		"scss",
 		"snippets"
 	],
-    "contributes": {
-        "snippets": [
+	"activationEvents": [
+		"onLanguage:scss"
+	],
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"capabilities": {
+		"virtualWorkspaces": true
+	},
+	"main": "./out/extension.js",
+	"contributes": {
+		"snippets": [
 			{
 				"language": "css",
 				"path": "./snippets/css.json"
@@ -43,9 +54,39 @@
 				"language": "scss",
 				"path": "./snippets/scss.json"
 			}
-        ]
-    },
+		],
+		"configuration": {
+			"type": "object",
+			"title": "CSS & SCSS Snippets",
+			"properties": {
+				"l13CSSSnippets.useFunctionBlockPadding": {
+					"type": "boolean",
+					"default": true,
+					"description": "Controls if a function block has additional empty lines."
+				}
+			}
+		}
+	},
 	"scripts": {
-		"build": "node ./src/index.js"
+		"docs": "node ./scripts/docs.js",
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./",
+		"update": "rm -rf node_modules && rm package-lock.json && npm install",
+		"check-lint-rules": "node ./plugins/check-lint-rules"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.7",
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^4.22.1",
+		"@typescript-eslint/eslint-plugin-tslint": "^4.22.1",
+		"@typescript-eslint/parser": "^4.22.1",
+		"del": "^6.0.0",
+		"eslint": "^7.26.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsdoc": "^33.3.0",
+		"eslint-plugin-l13": "file:plugins/eslint-plugin-l13",
+		"typescript": "^4.8.4"
 	}
 }
