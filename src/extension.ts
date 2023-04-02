@@ -28,7 +28,7 @@ export function activate (context: vscode.ExtensionContext) {
 	
 	const changeConfiguration = vscode.workspace.onDidChangeConfiguration((event) => {
 		
-		if (event.affectsConfiguration('l13CSSSnippets.useFunctionBlockPadding')) {
+		if (event.affectsConfiguration('l13Snippets.scss.useFunctionBlockPadding')) {
 			buildAllCompletionItems();
 		}
 		
@@ -42,7 +42,7 @@ export function activate (context: vscode.ExtensionContext) {
 
 function get (key: string, value?: any) {
 	
-	return vscode.workspace.getConfiguration('l13CSSSnippets').get(key, value);
+	return vscode.workspace.getConfiguration('l13Snippets.scss').get(key, value);
 	
 }
 

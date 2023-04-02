@@ -4,7 +4,7 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 
 ## What's new in CSS Snippets 0.17.0
 
-- Added `l13SHSnippets.useFunctionBlockPadding` to enable or disable empty lines in function block scopes.
+- Added `l13Snippets.shellScript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
 
 ## Index
 

@@ -57,11 +57,11 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "CSS & SCSS Snippets",
+			"title": "SCSS Snippets",
 			"properties": {
-				"l13CSSSnippets.useFunctionBlockPadding": {
+				"l13Snippets.scss.useFunctionBlockPadding": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "Controls if a function block has additional empty lines."
 				}
 			}
