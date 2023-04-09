@@ -54,7 +54,7 @@ fs.writeFileSync(path.join(__dirname, '..', 'SNIPPETS.md'), contents.join('\n'),
 
 function formatSnippets (snippet) {
 	
-	const body = snippet.body.join(' ').replace(/\t/g, '').replace(/`/g, '\`');
+	const body = snippet.body.join(' ').replace(/\s+/g, ' ').replace(/`/g, '\`');
 	
 	return `| \`${snippet.prefix}\` | \`${body}\` |`;
 	

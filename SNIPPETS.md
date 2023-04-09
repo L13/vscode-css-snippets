@@ -212,7 +212,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `-usa` | `-webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto;` |
 | `-usn` | `-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;` |
 | `-ust` | `-webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text;` |
-| `@-k` | `@-moz-keyframes ${0:animationname} { 0% {  } 100% {  } } @-o-keyframes ${1:animationname} { 0% {  } 100% {  } } @-webkit-keyframes ${1:animationname} { 0% {  } 100% {  } } @keyframes ${1:animationname} { 0% {  } 100% {  } }` |
+| `@-k` | `@-moz-keyframes ${0:animationname} { 0% { } 100% { } } @-o-keyframes ${1:animationname} { 0% { } 100% { } } @-webkit-keyframes ${1:animationname} { 0% { } 100% { } } @keyframes ${1:animationname} { 0% { } 100% { } }` |
 | `@c1` | `@charset "$0"` |
 | `@cu8` | `@charset "UTF-8"` |
 | `@ff` | `@font-face { $0 }` |
@@ -220,8 +220,8 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@ffw` | `@font-face { font-family: ${1:name}; src: url('${0:file.woff}'); }` |
 | `@i1` | `@import "$0";` |
 | `@iu$` | `@import url("$0");` |
-| `@k` | `@keyframes ${0:animationname} { 0% {  } 100% {  } }` |
-| `@m_` | `@media $0 {  }` |
+| `@k` | `@keyframes ${0:animationname} { 0% { } 100% { } }` |
+| `@m_` | `@media $0 { }` |
 | `@ma_` | `@media all { $0 }` |
 | `@mnp_` | `@media not print { $0 }` |
 | `@mns_` | `@media not screen { $0 }` |
@@ -969,18 +969,18 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@e1` | `@error ${0:message};` |
 | `@e1` | `@extend ${0:name};` |
 | `@e_` | `@else { $0 }` |
-| `@ei_` | `@each ${1:$item} in ${0:$items} {  }` |
-| `@ei_` | `@else if ${0:condition} {  }` |
+| `@ei_` | `@each ${1:$item} in ${0:$items} { }` |
+| `@ei_` | `@else if ${0:condition} { }` |
 | `@f1` | `@forward '$0';` |
-| `@f_` | `@function ${1:name} ($2) {  $0  }` |
-| `@fft_` | `@for ${1:$i} from ${2:1} through ${0:$end} {  }` |
-| `@i$_` | `@include ${1:name}() {  $0  }` |
+| `@f_` | `@function ${1:name} ($2) { $0 }` |
+| `@fft_` | `@for ${1:$i} from ${2:1} through ${0:$end} { }` |
+| `@i$_` | `@include ${1:name}() { $0 }` |
 | `@i$` | `@include ${0:name}();` |
-| `@i_` | `@if ${0:condition} {  }` |
-| `@i_` | `@include ${1:name} {  $0  }` |
-| `@m$_` | `@mixin ${1:name} ($2) {  $0  }` |
+| `@i_` | `@if ${0:condition} { }` |
+| `@i_` | `@include ${1:name} { $0 }` |
+| `@m$_` | `@mixin ${1:name} ($2) { $0 }` |
 | `@r` | `@return ` |
 | `@u1` | `@use '$0';` |
 | `@w1` | `@warn ${0:message};` |
-| `@w_` | `@while ${0:condition} {  }` |
+| `@w_` | `@while ${0:condition} { }` |
 | `i$3` | `if(${1:condition}, ${2:true}, ${0:false})` |
