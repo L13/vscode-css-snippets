@@ -2,9 +2,21 @@
 
 This extension contains property snippets for CSS and rule snippets for SCSS.
 
-## What's new in CSS Snippets 0.17.0
+## What's new in CSS Snippets 0.18.0
 
-- Added `l13Snippets.shellScript.useFunctionBlockPadding` to enable or disable line padding in function blocks.
+- Added `_` for simple brace scope`{ ... }`.
+- Added `__` for sub brace scope`& { ... }`.
+- Added `grid` properties.
+- Added `writing-mode` property.
+- Added `block` and `inline` properties for `border`, `margin` and `padding`.
+- Added SCSS module functions.
+- Added `$1`, `$d1` and `$g1` for SCSS variable declaration.
+- Added `true`, `false` and `null` for SCSS.
+- Simplified SCSS include
+- Strings are always single quote.
+- Some fixes and clean up like simplified font.
+- Eliminated a lot of duplicated prefixes with value selection.
+- Removed properties with prefixes.
 
 ## Index
 
@@ -19,7 +31,7 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 
 The idea of those snippets is to create a property instantly based on some simple rules without selecting it by menu or auto completion. Write one to six characters and you get the property and the value.
 
-Only a few prefixes are twice, because the rules are matching different properties like `fs1` -> `flex-shrink: 1;` and `font-size: 0;`. Then you have to pick the right one.
+Only a few prefixes are twice, because the rules are matching different properties like `fs1` -> `flex-shrink: 0;` and `font-size: 0;`. Then you have to pick the right one.
 
 __The following prefixes are just examples to explain the rules.__ To see the complete list, please visit [SNIPPETS.md](https://github.com/L13/vscode-css-snippets/blob/master/SNIPPETS.md). If a property or pattern might be missing, please open an issue on [Github](https://github.com/L13/vscode-css-snippets/issues) and make a suggestion.
 
@@ -58,25 +70,19 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | -------:| ------- |
 | `bunr2_`| <b>b</b>ackground: <b>u</b>rl() <b>n</b>o-<b>r</b>epeat <b>0</b> <b>0</b> <b>#000000</b>; |
 
-### 5. Property prefixes are starting with a minus "-".
-
-| Prefix  | Snippet |
-| -------:| ------- |
-| `-br1`  | <b>-</b>moz-<b>b</b>order-<b>r</b>adius: <b>0</b>; <b>-</b>webkit-<b>b</b>order-<b>r</b>adius: <b>0</b>; <b>b</b>order-<b>r</b>adius: <b>0</b>; |
-
-### 6. Rules are starting with an "@" symbol.
+### 5. Rules are starting with an "@" symbol.
 
 | Prefix  | Snippet |
 | -------:| ------- |
 | `@i`    | <b>@i</b>mport ''; |
 
-### 7. A dollar sign "$" defines a function call.
+### 6. A dollar sign "$" defines a function call.
 
 | Prefix  | Snippet |
 | -------:| ------- |
 | `c$`    | <b>c</b>alc<b>()</b>; |
 
-### 8. A number after the dollar sign "$" defines the amount of parameters.
+### 7. A number after the dollar sign "$" defines the amount of parameters.
 
 | Prefix  | Snippet |
 | -------:| ------- |
@@ -87,11 +93,17 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 
 ### 1. All CSS snippets are available in SCSS, too.
 
+| Prefix  | Snippet |
+| -------:| ------- |
+| `t`   | <b>t</b>rue |
+| `f`   | <b>f</b>alse |
+| `n`   | <b>n</b>ull |
+
 ### 2. Rules are starting with an "@" symbol.
 
 | Prefix  | Snippet |
 | -------:| ------- |
-| `@c`    | <b>@c</b>ontent; |
+| `@c1`    | <b>@c</b>ontent; |
 
 ### 3. An underscore "\_" after a prefix defines a brace scope.
 
@@ -99,12 +111,13 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | -------:| ------- |
 | `@i_`   | <b>@i</b>f CONDITION <b>{</b> ... <b>}</b> |
 
-### 4. A dollar sign "$" defines also a mixin call.
+### 4. Variables are starring with a "$" sign.
 
 | Prefix  | Snippet |
 | -------:| ------- |
-| `@i$`   | <b>@i</b>nclude NAME <b>()</b>; |
-| `@i$_`  | <b>@i</b>nclude NAME <b>()</b> <b>{</b> ... <b>}</b>; |
+| `$1`   | <b>$</b>name: null; |
+| `$d1`   | <b>$</b>name: null !<b>d</b>efault; |
+| `$g1`   | <b>$</b>name: null !<b>g</b>lobal; |
 
 ### 5. The number "1" defines a one line snippet.
 
@@ -122,10 +135,15 @@ It is recommended to exclude emmet support for CSS and SCSS in the settings.
 	"scss"
 ],
 ```
-And it is recommended to set the snippet suggestions to top.
+It is recommended to change the word separators for css and scss.
 
 ```json
-"editor.snippetSuggestions": "top",
+"[css]": {
+	"editor.wordSeparators": "`~!#$%^&*()=+[{]}\\|;:'\",.<>/?",
+},
+"[scss]": {
+	"editor.wordSeparators": "`~!#%^&*()=+[{]}\\|;:'\",.<>/?",
+},
 ```
 
 ## Recommended Keyboard Shortcuts

@@ -2,7 +2,7 @@
 	"name": "l13-css-snippets",
 	"displayName": "CSS and SCSS Snippets",
 	"description": "Snippets for CSS and SCSS",
-	"version": "0.17.0",
+	"version": "0.18.0",
 	"publisher": "L13RARY",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"homepage": "https://github.com/l13/vscode-css-snippets/blob/master/README.md",

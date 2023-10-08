@@ -24,6 +24,9 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 
 const findComments = /"(?:[^"\r\n\\]*(?:\\.)*)*"|(\/\*(?:.|[\r\n])*?\*\/|\/\/[^\r\n]*|export[\s\r\n]+default[\s\r\n]*|;)|,[\s\r\n]*?([\]}])/g;
 
+const prefixes = {};
+const duplicates = [];
+
 //	Initialize _________________________________________________________________
 
 for (const [headline, pathnames] of Object.entries(paths)) {
@@ -39,10 +42,20 @@ for (const [headline, pathnames] of Object.entries(paths)) {
 	}
 	const snippets = [];
 	for (const snippet of Object.values(json)) {
-		if (snippet.prefix !== '___') snippets.push(formatSnippets(snippet));
+		const prefix = snippet.prefix;
+		if (prefix !== '___') snippets.push(formatSnippets(snippet));
+		if (!prefixes[prefix]) prefixes[prefix] = [];
+		prefixes[prefix].push(snippet.body.join(''));
 	}
 	contents.push(snippets.sort().join('\n'));
 }
+
+for (const [prefix, values] of Object.entries(prefixes)) {
+	if (values.length > 1) duplicates.push(`${prefix}: ${values.join('  |  ')}`);
+}
+
+console.log(duplicates.join('\n'));
+console.log(`\nFound ${duplicates.length} duplicated prefixes\n`);
 
 fs.writeFileSync(path.join(__dirname, '..', 'SNIPPETS.md'), contents.join('\n'), 'utf-8');
 
@@ -54,7 +67,10 @@ fs.writeFileSync(path.join(__dirname, '..', 'SNIPPETS.md'), contents.join('\n'),
 
 function formatSnippets (snippet) {
 	
-	const body = snippet.body.join(' ').replace(/\s+/g, ' ').replace(/`/g, '\`');
+	const body = snippet.body.join(' ')
+		.replace(/\s+/g, ' ')
+		.replace(/`/g, '\`')
+		.replace(/\|/g, '\\|');
 	
 	return `| \`${snippet.prefix}\` | \`${body}\` |`;
 	
