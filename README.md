@@ -14,6 +14,7 @@ This extension contains property snippets for CSS and rule snippets for SCSS.
 - Added SCSS module functions.
 - Added `$1`, `$d1` and `$g1` for SCSS variable declaration.
 - Added `true`, `false` and `null` for SCSS.
+- Changed prefix for color from `_` to `#`.
 - Simplified SCSS include.
 - Strings are always single quote.
 - Some fixes and clean up like simplified font.
