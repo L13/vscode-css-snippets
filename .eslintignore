@@ -3,4 +3,8 @@
 images/
 out/
 plugins/
-scripts/
+snippets/
+tasks/
+test/
+.eslintrc.json
+gulpfile.js

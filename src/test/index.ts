@@ -1,30 +1,33 @@
 //	Imports ____________________________________________________________________
 
-import * as vscode from 'vscode';
-
-import * as functions from './commands/functions';
+import * as path from 'path';
+import * as glob from 'glob';
+import Mocha from 'mocha';
 
 //	Variables __________________________________________________________________
 
+const mocha = new Mocha({
+	ui: 'bdd',
+	color: true,
+});
 
+const files = glob.sync('**/*.test.js', {
+	cwd: __dirname,
+});
 
 //	Initialize _________________________________________________________________
 
+files.forEach((file) => mocha.addFile(path.resolve(__dirname, file)));
 
-
-//	Exports ____________________________________________________________________
-
-export function activate (context: vscode.ExtensionContext) {
-	
-	functions.activate(context);
-	
-}
-
-export function deactivate () {
+mocha.run(() => {
 	
 	//
 	
-}
+});
+
+//	Exports ____________________________________________________________________
+
+
 
 //	Functions __________________________________________________________________
 
