@@ -2,19 +2,19 @@
 
 Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for all these snippets are explained in the [README.md](./README.md)
 
-
 ### CSS
 
 | Prefix | Snippet |
-| ------:| ------- |
+| -----: | ------- |
 | `!` | `!important` |
+| `@c_` | `@container $0 { }` |
 | `@c1` | `@charset '${0:UTF-8}';` |
 | `@ff_` | `@font-face { $0 }` |
 | `@ffewo` | `@font-face { font-family: ${1:name}; src: url(${0:fontname}.eot); /* IE */ src: local('☺︎'), url('${0:fontname}.woff') format('woff'), url('${0:fontname}.otf') format('opentype'); /* Safari */ }` |
 | `@ffw` | `@font-face { font-family: ${1:name}; src: url('${0:file.woff}'); }` |
 | `@i1` | `@import '$0';` |
 | `@iu$` | `@import url('$0');` |
-| `@k` | `@keyframes ${0:animationname} { 0% { } 100% { } }` |
+| `@k_` | `@keyframes ${0:animationname} { }` |
 | `@m_` | `@media $0 { }` |
 | `@ma_` | `@media all { $0 }` |
 | `@mnp_` | `@media not print { $0 }` |
@@ -23,10 +23,12 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@mos_` | `@media only screen { $0 }` |
 | `@mp_` | `@media print { $0 }` |
 | `@ms_` | `@media screen { $0 }` |
-| `__` | `&$1 { $0 }` |
-| `_` | `$1 { $0 }` |
+| `@s_` | `@supports ${0:condition} { }` |
 | `a$1` | `attr($0)` |
 | `a1` | `animation: ${1:name} ${2:1}s ${3:ease} ${4:0}s ${5:1} ${6:normal} ${7:none} ${0:running};` |
+| `aa` | `appearance: auto;` |
+| `ab` | `appearance: button;` |
+| `ac` | `appearance: checkbox;` |
 | `acc` | `align-content: center;` |
 | `ace` | `align-content: end;` |
 | `acfe` | `align-content: flex-end;` |
@@ -44,97 +46,105 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `afmf` | `animation-fill-mode: forwards;` |
 | `afmn` | `animation-fill-mode: none;` |
 | `aib` | `align-items: baseline;` |
-| `aic1` | `animation-iteration-count: ${0:1};` |
 | `aic` | `align-items: center;` |
+| `aic1` | `animation-iteration-count: ${0:1};` |
 | `aici` | `animation-iteration-count: infinite;` |
 | `aie` | `align-items: end;` |
 | `aife` | `align-items: flex-end;` |
 | `aifs` | `align-items: flex-start;` |
 | `ais` | `align-items: ${1\|start,stretch\|};` |
+| `al` | `appearance: listbox;` |
+| `am` | `appearance: ${1\|menulist,meter\|};` |
+| `amb` | `appearance: menulist-button;` |
 | `an` | `animation-name: $0;` |
+| `an` | `appearance: none;` |
 | `ann` | `animation-name: none;` |
+| `apb` | `appearance: progress-bar;` |
 | `apsp` | `animation-play-state: paused;` |
 | `apsr` | `animation-play-state: running;` |
+| `ar` | `appearance: radio;` |
+| `as` | `appearance: searchfield;` |
 | `asa` | `align-self: auto;` |
 | `asb` | `align-self: baseline;` |
 | `asc` | `align-self: center;` |
 | `asfe` | `align-self: flex-end;` |
 | `asfs` | `align-self: flex-start;` |
 | `ass` | `align-self: stretch;` |
+| `at` | `appearance: ${1\|textarea,textfield\|};` |
 | `aticb` | `animation-timing-function: cubic-bezier(${1:0}, ${2:0}, ${3:0}, ${0:0});` |
 | `atie` | `animation-timing-function: ease;` |
 | `atiei` | `animation-timing-function: ease-in;` |
 | `atieo` | `animation-timing-function: ease-out;` |
 | `atil` | `animation-timing-function: linear;` |
+| `b#` | `background: ${0:#000000};` |
 | `b1` | `bottom: ${0:0};` |
-| `b_` | `background: ${0:#000000};` |
 | `ba` | `bottom: auto;` |
 | `baf` | `background-attachment: fixed;` |
 | `bas` | `background-attachment: scroll;` |
-| `bbc_` | `border-block-color: ${0:#000000};` |
-| `bbc_` | `border-bottom-color: ${0:#000000};` |
-| `bbd1_` | `border-block: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `bbd1_` | `border-bottom: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `bbec_` | `border-block-end-color: ${0:#000000};` |
-| `bbed1_` | `border-block-end: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bbc#` | `border-block-color: ${0:#000000};` |
+| `bbc#` | `border-bottom-color: ${0:#000000};` |
+| `bbd1#` | `border-block: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bbd1#` | `border-bottom: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bbec#` | `border-block-end-color: ${0:#000000};` |
 | `bbed` | `border-block-end-style: ${1\|dashed,dotted,double\|};` |
-| `bbeg1_` | `border-block-end: groove ${1:0} ${0:#000000};` |
+| `bbed1#` | `border-block-end: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
 | `bbeg` | `border-block-end-style: groove;` |
-| `bbeh1_` | `border-block-end: hidden ${1:0} ${0:#000000};` |
+| `bbeg1#` | `border-block-end: groove ${1:0} ${0:#000000};` |
 | `bbeh` | `border-block-end-style: hidden;` |
-| `bbei1_` | `border-block-end: inset ${1:0} ${0:#000000};` |
+| `bbeh1#` | `border-block-end: hidden ${1:0} ${0:#000000};` |
 | `bbei` | `border-block-end-style: inset;` |
+| `bbei1#` | `border-block-end: inset ${1:0} ${0:#000000};` |
 | `bben` | `border-block-end-style: none;` |
-| `bbeo1_` | `border-block-end: outset ${1:0} ${0:#000000};` |
 | `bbeo` | `border-block-end-style: outset;` |
-| `bber1_` | `border-block-end: ridge ${1:0} ${0:#000000};` |
+| `bbeo1#` | `border-block-end: outset ${1:0} ${0:#000000};` |
 | `bber` | `border-block-end-style: ridge;` |
-| `bbes1_` | `border-block-end: solid ${1:0} ${0:#000000};` |
+| `bber1#` | `border-block-end: ridge ${1:0} ${0:#000000};` |
 | `bbes` | `border-block-end-style: solid;` |
+| `bbes1#` | `border-block-end: solid ${1:0} ${0:#000000};` |
 | `bbew1` | `border-block-end-width: ${0:0};` |
 | `bbewm` | `border-block-end-width: medium;` |
 | `bbewt` | `border-block-end-width: ${1\|thick,thin\|};` |
-| `bbg1_` | `border-block: groove ${1:0} ${0:#000000};` |
-| `bbg1_` | `border-bottom: groove ${1:0} ${0:#000000};` |
-| `bbh1_` | `border-block: hidden ${1:0} ${0:#000000};` |
-| `bbh1_` | `border-bottom: hidden ${1:0} ${0:#000000};` |
-| `bbi1_` | `border-block: inset ${1:0} ${0:#000000};` |
-| `bbi1_` | `border-bottom: inset ${1:0} ${0:#000000};` |
+| `bbg1#` | `border-block: groove ${1:0} ${0:#000000};` |
+| `bbg1#` | `border-bottom: groove ${1:0} ${0:#000000};` |
+| `bbh1#` | `border-block: hidden ${1:0} ${0:#000000};` |
+| `bbh1#` | `border-bottom: hidden ${1:0} ${0:#000000};` |
+| `bbi1#` | `border-block: inset ${1:0} ${0:#000000};` |
+| `bbi1#` | `border-bottom: inset ${1:0} ${0:#000000};` |
 | `bblr1` | `border-bottom-left-radius: ${0:0};` |
 | `bblr2` | `border-bottom-left-radius: ${1:0} ${0:0};` |
 | `bbn` | `border-block: none;` |
-| `bbo1_` | `border-block: outset ${1:0} ${0:#000000};` |
-| `bbo1_` | `border-bottom: outset ${1:0} ${0:#000000};` |
-| `bbr1_` | `border-block: ridge ${1:0} ${0:#000000};` |
-| `bbr1_` | `border-bottom: ridge ${1:0} ${0:#000000};` |
+| `bbo1#` | `border-block: outset ${1:0} ${0:#000000};` |
+| `bbo1#` | `border-bottom: outset ${1:0} ${0:#000000};` |
+| `bbr1#` | `border-block: ridge ${1:0} ${0:#000000};` |
+| `bbr1#` | `border-bottom: ridge ${1:0} ${0:#000000};` |
 | `bbrr1` | `border-bottom-right-radius: ${0:0};` |
 | `bbrr2` | `border-bottom-right-radius: ${1:0} ${0:0};` |
-| `bbs1_` | `border-block: solid ${1:0} ${0:#000000};` |
-| `bbs1_` | `border-bottom: solid ${1:0} ${0:#000000};` |
-| `bbsc_` | `border-block-start-color: ${0:#000000};` |
-| `bbsd1_` | `border-block-start: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bbs1#` | `border-block: solid ${1:0} ${0:#000000};` |
+| `bbs1#` | `border-bottom: solid ${1:0} ${0:#000000};` |
+| `bbsc#` | `border-block-start-color: ${0:#000000};` |
 | `bbsd` | `border-block-style: ${1\|dashed,dotted,double\|};` |
 | `bbsd` | `border-bottom-style: ${1\|dashed,dotted,double\|};` |
-| `bbsg1_` | `border-block-start: groove ${1:0} ${0:#000000};` |
+| `bbsd1#` | `border-block-start: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
 | `bbsg` | `border-block-style: groove;` |
 | `bbsg` | `border-bottom-style: groove;` |
-| `bbsh1_` | `border-block-start: hidden ${1:0} ${0:#000000};` |
+| `bbsg1#` | `border-block-start: groove ${1:0} ${0:#000000};` |
 | `bbsh` | `border-block-style: hidden;` |
 | `bbsh` | `border-bottom-style: hidden;` |
-| `bbsi1_` | `border-block-start: inset ${1:0} ${0:#000000};` |
+| `bbsh1#` | `border-block-start: hidden ${1:0} ${0:#000000};` |
 | `bbsi` | `border-block-style: inset;` |
 | `bbsi` | `border-bottom-style: inset;` |
+| `bbsi1#` | `border-block-start: inset ${1:0} ${0:#000000};` |
 | `bbsn` | `border-block-style: none;` |
 | `bbsn` | `border-bottom-style: none;` |
-| `bbso1_` | `border-block-start: outset ${1:0} ${0:#000000};` |
 | `bbso` | `border-block-style: outset;` |
 | `bbso` | `border-bottom-style: outset;` |
-| `bbsr1_` | `border-block-start: ridge ${1:0} ${0:#000000};` |
+| `bbso1#` | `border-block-start: outset ${1:0} ${0:#000000};` |
 | `bbsr` | `border-block-style: ridge;` |
 | `bbsr` | `border-bottom-style: ridge;` |
-| `bbss1_` | `border-block-start: solid ${1:0} ${0:#000000};` |
+| `bbsr1#` | `border-block-start: ridge ${1:0} ${0:#000000};` |
 | `bbss` | `border-block-style: solid;` |
 | `bbss` | `border-bottom-style: solid;` |
+| `bbss1#` | `border-block-start: solid ${1:0} ${0:#000000};` |
 | `bbssd` | `border-block-start-style: ${1\|dashed,dotted,double\|};` |
 | `bbssg` | `border-block-start-style: groove;` |
 | `bbssh` | `border-block-start-style: hidden;` |
@@ -152,28 +162,28 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bbwm` | `border-bottom-width: medium;` |
 | `bbwt` | `border-block-width: ${1\|thick,thin\|};` |
 | `bbwt` | `border-bottom-width: ${1\|thick,thin\|};` |
-| `bc_` | `background-color: ${0:#000000};` |
-| `bc_` | `border-color: ${0:#000000};` |
+| `bc#` | `background-color: ${0:#000000};` |
+| `bc#` | `border-color: ${0:#000000};` |
 | `bcbb` | `background-clip: border-box;` |
 | `bcc` | `border-collapse: collapse;` |
 | `bccb` | `background-clip: content-box;` |
 | `bcpb` | `background-clip: padding-box;` |
 | `bcs` | `border-collapse: separate;` |
 | `bct` | `background-color: transparent;` |
-| `bd1_` | `border: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `bg1_` | `border: groove ${1:0} ${0:#000000};` |
-| `bh1_` | `border: hidden ${1:0} ${0:#000000};` |
-| `bi1_` | `border: inset ${1:0} ${0:#000000};` |
-| `bic_` | `border-inline-color: ${0:#000000};` |
-| `bid1_` | `border-inline: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `biec_` | `border-inline-end-color: ${0:#000000};` |
-| `bied1_` | `border-inline-end: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `bieg1_` | `border-inline-end: groove ${1:0} ${0:#000000};` |
-| `bieh1_` | `border-inline-end: hidden ${1:0} ${0:#000000};` |
-| `biei1_` | `border-inline-end: inset ${1:0} ${0:#000000};` |
-| `bieo1_` | `border-inline-end: outset ${1:0} ${0:#000000};` |
-| `bier1_` | `border-inline-end: ridge ${1:0} ${0:#000000};` |
-| `bies1_` | `border-inline-end: solid ${1:0} ${0:#000000};` |
+| `bd1#` | `border: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bg1#` | `border: groove ${1:0} ${0:#000000};` |
+| `bh1#` | `border: hidden ${1:0} ${0:#000000};` |
+| `bi1#` | `border: inset ${1:0} ${0:#000000};` |
+| `bic#` | `border-inline-color: ${0:#000000};` |
+| `bid1#` | `border-inline: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `biec#` | `border-inline-end-color: ${0:#000000};` |
+| `bied1#` | `border-inline-end: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bieg1#` | `border-inline-end: groove ${1:0} ${0:#000000};` |
+| `bieh1#` | `border-inline-end: hidden ${1:0} ${0:#000000};` |
+| `biei1#` | `border-inline-end: inset ${1:0} ${0:#000000};` |
+| `bieo1#` | `border-inline-end: outset ${1:0} ${0:#000000};` |
+| `bier1#` | `border-inline-end: ridge ${1:0} ${0:#000000};` |
+| `bies1#` | `border-inline-end: solid ${1:0} ${0:#000000};` |
 | `biesd` | `border-inline-end-style: ${1\|dashed,dotted,double\|};` |
 | `biesg` | `border-inline-end-style: groove;` |
 | `biesh` | `border-inline-end-style: hidden;` |
@@ -185,41 +195,41 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `biew1` | `border-inline-end-width: ${0:0};` |
 | `biewm` | `border-inline-end-width: medium;` |
 | `biewt` | `border-inline-end-width: ${1\|thick,thin\|};` |
-| `big1_` | `border-inline: groove ${1:0} ${0:#000000};` |
-| `bih1_` | `border-inline: hidden ${1:0} ${0:#000000};` |
-| `bii1_` | `border-inline: inset ${1:0} ${0:#000000};` |
+| `big1#` | `border-inline: groove ${1:0} ${0:#000000};` |
+| `bih1#` | `border-inline: hidden ${1:0} ${0:#000000};` |
+| `bii1#` | `border-inline: inset ${1:0} ${0:#000000};` |
 | `bin` | `background-image: none;` |
 | `bin` | `border-inline: none;` |
-| `bio1_` | `border-inline: outset ${1:0} ${0:#000000};` |
+| `bio1#` | `border-inline: outset ${1:0} ${0:#000000};` |
 | `bio1` | `border-image-outset: ${0:0};` |
 | `bio2` | `border-image-outset: ${1:0} ${0:0};` |
 | `bio3` | `border-image-outset: ${1:0} ${2:0} ${0:0};` |
 | `bio4` | `border-image-outset: ${1:0} ${2:0} ${3:0} ${0:0};` |
-| `bir1_` | `border-inline: ridge ${1:0} ${0:#000000};` |
+| `bir1#` | `border-inline: ridge ${1:0} ${0:#000000};` |
 | `birr` | `border-image-repeat: ${1\|repeat,round\|};` |
 | `birs` | `border-image-repeat: stretch;` |
-| `bis1_` | `border-inline: solid ${1:0} ${0:#000000};` |
+| `bis1#` | `border-inline: solid ${1:0} ${0:#000000};` |
 | `bis1` | `border-image-slice: ${0:0};` |
 | `bis1f` | `border-image-slice: ${0:0} fill;` |
 | `bis2` | `border-image-slice: ${1:0} ${0:0};` |
 | `bis2f` | `border-image-slice: ${1:0} ${0:0} fill;` |
-| `bisc_` | `border-inline-start-color: ${0:#000000};` |
-| `bisd1_` | `border-inline-start: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `bisc#` | `border-inline-start-color: ${0:#000000};` |
 | `bisd` | `border-inline-style: ${1\|dashed,dotted,double\|};` |
-| `bisg1_` | `border-inline-start: groove ${1:0} ${0:#000000};` |
+| `bisd1#` | `border-inline-start: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
 | `bisg` | `border-inline-style: groove;` |
-| `bish1_` | `border-inline-start: hidden ${1:0} ${0:#000000};` |
+| `bisg1#` | `border-inline-start: groove ${1:0} ${0:#000000};` |
 | `bish` | `border-inline-style: hidden;` |
-| `bisi1_` | `border-inline-start: inset ${1:0} ${0:#000000};` |
+| `bish1#` | `border-inline-start: hidden ${1:0} ${0:#000000};` |
 | `bisi` | `border-inline-style: inset;` |
+| `bisi1#` | `border-inline-start: inset ${1:0} ${0:#000000};` |
 | `bisn` | `border-image-source: none;` |
 | `bisn` | `border-inline-style: none;` |
-| `biso1_` | `border-inline-start: outset ${1:0} ${0:#000000};` |
 | `biso` | `border-inline-style: outset;` |
-| `bisr1_` | `border-inline-start: ridge ${1:0} ${0:#000000};` |
+| `biso1#` | `border-inline-start: outset ${1:0} ${0:#000000};` |
 | `bisr` | `border-inline-style: ridge;` |
-| `biss1_` | `border-inline-start: solid ${1:0} ${0:#000000};` |
+| `bisr1#` | `border-inline-start: ridge ${1:0} ${0:#000000};` |
 | `biss` | `border-inline-style: solid;` |
+| `biss1#` | `border-inline-start: solid ${1:0} ${0:#000000};` |
 | `bissd` | `border-inline-start-style: ${1\|dashed,dotted,double\|};` |
 | `bissg` | `border-inline-start-style: groove;` |
 | `bissh` | `border-inline-start-style: hidden;` |
@@ -232,13 +242,13 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bisw1` | `border-inline-start-width: ${0:0};` |
 | `biswm` | `border-inline-start-width: medium;` |
 | `biswt` | `border-inline-start-width: ${1\|thick,thin\|};` |
+| `biu` | `background-image: url('$0');` |
+| `biu` | `border-image: url('${0:url}');` |
 | `biu1` | `border-image: url('${1:url}') ${0:100%};` |
 | `biu2` | `border-image: url('${1:url}') ${2:100%} ${0:1};` |
 | `biu3` | `border-image: url('${1:url}') ${2:100%} ${3:1} ${0:0};` |
-| `biu3r` | `border-image: url('${1:url}') ${2:100%} ${3:1} ${4:0} ${5\|repeat,round\|;` |
-| `biu3s` | `border-image: url('${1:url}') ${2:100%} ${3:1} ${4:0} ${5\|space,stretch\|;` |
-| `biu` | `background-image: url('$0');` |
-| `biu` | `border-image: url('${0:url}');` |
+| `biu3r` | `border-image: url('${1:url}') ${2:100%} ${3:1} ${4:0} ${5\|repeat,round\|};` |
+| `biu3s` | `border-image: url('${1:url}') ${2:100%} ${3:1} ${4:0} ${5\|space,stretch\|};` |
 | `biw1` | `border-image-width: ${0:0};` |
 | `biw1` | `border-inline-width: ${0:0};` |
 | `biw2` | `border-image-width: ${1:0} ${0:0};` |
@@ -247,14 +257,14 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `biwa` | `border-image-width: auto;` |
 | `biwm` | `border-inline-width: medium;` |
 | `biwt` | `border-inline-width: ${1\|thick,thin\|};` |
-| `blc_` | `border-left-color: ${0:#000000};` |
-| `bld1_` | `border-left: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `blg1_` | `border-left: groove ${1:0} ${0:#000000};` |
-| `blh1_` | `border-left: hidden ${1:0} ${0:#000000};` |
-| `bli1_` | `border-left: inset ${1:0} ${0:#000000};` |
-| `blo1_` | `border-left: outset ${1:0} ${0:#000000};` |
-| `blr1_` | `border-left: ridge ${1:0} ${0:#000000};` |
-| `bls1_` | `border-left: solid ${1:0} ${0:#000000};` |
+| `blc#` | `border-left-color: ${0:#000000};` |
+| `bld1#` | `border-left: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `blg1#` | `border-left: groove ${1:0} ${0:#000000};` |
+| `blh1#` | `border-left: hidden ${1:0} ${0:#000000};` |
+| `bli1#` | `border-left: inset ${1:0} ${0:#000000};` |
+| `blo1#` | `border-left: outset ${1:0} ${0:#000000};` |
+| `blr1#` | `border-left: ridge ${1:0} ${0:#000000};` |
+| `bls1#` | `border-left: solid ${1:0} ${0:#000000};` |
 | `blsd` | `border-left-style: ${1\|dashed,dotted,double\|};` |
 | `blsg` | `border-left-style: groove;` |
 | `blsh` | `border-left-style: hidden;` |
@@ -268,7 +278,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `blwt` | `border-left-width: ${1\|thick,thin\|};` |
 | `bn` | `background: none;` |
 | `bn` | `border: none;` |
-| `bo1_` | `border: outset ${1:0} ${0:#000000};` |
+| `bo1#` | `border: outset ${1:0} ${0:#000000};` |
 | `bobb` | `background-origin: border-box;` |
 | `bopb` | `background-origin: padding-box;` |
 | `bp2` | `background-position: ${1:0} ${0:0};` |
@@ -281,43 +291,46 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bprb` | `background-position: right bottom;` |
 | `bprc` | `background-position: right center;` |
 | `bprt` | `background-position: right top;` |
-| `br1_` | `border: ridge ${1:0} ${0:#000000};` |
+| `br1#` | `border: ridge ${1:0} ${0:#000000};` |
 | `br1` | `border-radius: ${0:0};` |
 | `br2` | `border-radius: ${1:0} ${0:0};` |
 | `br3` | `border-radius: ${1:0} ${2:0} ${0:0};` |
 | `br4` | `border-radius: ${1:0} ${2:0} ${3:0} ${0:0};` |
-| `brc_` | `border-right-color: ${0:#000000};` |
-| `brd1_` | `border-right: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `brg1_` | `border-right: groove ${1:0} ${0:#000000};` |
-| `brh1_` | `border-right: hidden ${1:0} ${0:#000000};` |
-| `bri1_` | `border-right: inset ${1:0} ${0:#000000};` |
+| `brc#` | `border-right-color: ${0:#000000};` |
+| `brd1#` | `border-right: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `brg1#` | `border-right: groove ${1:0} ${0:#000000};` |
+| `brh1#` | `border-right: hidden ${1:0} ${0:#000000};` |
+| `bri1#` | `border-right: inset ${1:0} ${0:#000000};` |
 | `brnr` | `background-repeat: no-repeat;` |
-| `bro1_` | `border-right: outset ${1:0} ${0:#000000};` |
-| `brr1_` | `border-right: ridge ${1:0} ${0:#000000};` |
-| `brr` | `background-repeat: ${1\|repeat,round\|};` |
-| `brrs` | `background-repeat: round space;` |
+| `bro1#` | `border-right: outset ${1:0} ${0:#000000};` |
+| `brr` | `background-repeat: ${1\|round,repeat\|};` |
+| `brr1#` | `border-right: ridge ${1:0} ${0:#000000};` |
+| `brrnr` | `background-repeat: ${1\|round,repeat\|} no-repeat;` |
+| `brrr` | `background-repeat: ${1\|round,repeat\|} ${1\|round,repeat\|};` |
+| `brrs` | `background-repeat: ${1\|round,repeat\|} space;` |
 | `brrx` | `background-repeat: repeat-x;` |
 | `brry` | `background-repeat: repeat-y;` |
-| `brs1_` | `border-right: solid ${1:0} ${0:#000000};` |
 | `brs` | `background-repeat: space;` |
+| `brs1#` | `border-right: solid ${1:0} ${0:#000000};` |
 | `brsd` | `border-right-style: ${1\|dashed,dotted,double\|};` |
 | `brsg` | `border-right-style: groove;` |
 | `brsh` | `border-right-style: hidden;` |
 | `brsi` | `border-right-style: inset;` |
 | `brsn` | `border-right-style: none;` |
+| `brsnr` | `background-repeat: space no-repeat;` |
 | `brso` | `border-right-style: outset;` |
-| `brsr` | `background-repeat: space round;` |
+| `brsr` | `background-repeat: space ${1\|round,repeat\|};` |
 | `brsr` | `border-right-style: ridge;` |
 | `brss` | `border-right-style: solid;` |
 | `brw1` | `border-right-width: ${1:0};` |
 | `brwm` | `border-right-width: medium;` |
 | `brwt` | `border-right-width: ${1\|thick,thin\|};` |
-| `bs1_` | `border: solid ${1:0} ${0:#000000};` |
+| `bs1#` | `border: solid ${1:0} ${0:#000000};` |
 | `bs1` | `border-spacing: ${0:0};` |
-| `bs2_` | `box-shadow: ${1:0} ${2:0} ${0:#000000};` |
+| `bs2#` | `box-shadow: ${1:0} ${2:0} ${0:#000000};` |
 | `bs2` | `background-size: ${1:0} ${0:0};` |
-| `bs3_` | `box-shadow: ${1:0} ${2:0} ${3:0} ${0:#000000};` |
-| `bs4_` | `box-shadow: ${1:0} ${2:0} ${3:0} ${4:0} ${0:#000000};` |
+| `bs3#` | `box-shadow: ${1:0} ${2:0} ${3:0} ${0:#000000};` |
+| `bs4#` | `box-shadow: ${1:0} ${2:0} ${3:0} ${4:0} ${0:#000000};` |
 | `bsa` | `background-size: auto;` |
 | `bsbb` | `box-sizing: border-box;` |
 | `bsc` | `background-size: ${1\|contain,cover\|};` |
@@ -325,28 +338,28 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bsd` | `border-style: ${1\|dashed,dotted,double\|};` |
 | `bsg` | `border-style: groove;` |
 | `bsh` | `border-style: hidden;` |
-| `bsi2_` | `box-shadow: inset ${1:0} ${2:0} ${0:#000000};` |
-| `bsi3_` | `box-shadow: inset ${1:0} ${2:0} ${3:0} ${0:#000000};` |
-| `bsi4_` | `box-shadow: inset ${1:0} ${2:0} ${3:0} ${4:0} ${0:#000000};` |
 | `bsi` | `border-style: inset;` |
+| `bsi2#` | `box-shadow: inset ${1:0} ${2:0} ${0:#000000};` |
+| `bsi3#` | `box-shadow: inset ${1:0} ${2:0} ${3:0} ${0:#000000};` |
+| `bsi4#` | `box-shadow: inset ${1:0} ${2:0} ${3:0} ${4:0} ${0:#000000};` |
 | `bsn` | `border-style: none;` |
 | `bsn` | `box-shadow: none;` |
 | `bso` | `border-style: outset;` |
 | `bsr` | `border-style: ridge;` |
 | `bss` | `border-style: solid;` |
 | `bt` | `background: transparent;` |
-| `btc_` | `border-top-color: ${0:#000000};` |
-| `btd1_` | `border-top: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `btg1_` | `border-top: groove ${1:0} ${0:#000000};` |
-| `bth1_` | `border-top: hidden ${1:0} ${0:#000000};` |
-| `bti1_` | `border-top: inset ${1:0} ${0:#000000};` |
+| `btc#` | `border-top-color: ${0:#000000};` |
+| `btd1#` | `border-top: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `btg1#` | `border-top: groove ${1:0} ${0:#000000};` |
+| `bth1#` | `border-top: hidden ${1:0} ${0:#000000};` |
+| `bti1#` | `border-top: inset ${1:0} ${0:#000000};` |
 | `btlr1` | `border-top-left-radius: ${0:0};` |
 | `btlr2` | `border-top-left-radius: ${1:0} ${0:0};` |
-| `bto1_` | `border-top: outset ${1:0} ${0:#000000};` |
-| `btr1_` | `border-top: ridge ${1:0} ${0:#000000};` |
+| `bto1#` | `border-top: outset ${1:0} ${0:#000000};` |
+| `btr1#` | `border-top: ridge ${1:0} ${0:#000000};` |
 | `btrr1` | `border-top-right-radius: ${0:0};` |
 | `btrr2` | `border-top-right-radius: ${1:0} ${0:0};` |
-| `bts1_` | `border-top: solid ${1:0} ${0:#000000};` |
+| `bts1#` | `border-top: solid ${1:0} ${0:#000000};` |
 | `btsd` | `border-top-style: ${1\|dashed,dotted,double\|};` |
 | `btsg` | `border-top-style: groove;` |
 | `btsh` | `border-top-style: hidden;` |
@@ -358,25 +371,25 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `btw1` | `border-top-width: ${0:0};` |
 | `btwm` | `border-top-width: medium;` |
 | `btwt` | `border-top-width: ${1\|thick,thin\|};` |
-| `bu_` | `background: url('${1:url}') ${0:#000000};` |
+| `bu#` | `background: url('${1:url}') ${0:#000000};` |
 | `bu` | `background: url('${0:url}');` |
-| `bunr2_` | `background: url('${1:url}') no-repeat ${2:0} ${3:0} ${0:#000000};` |
+| `bunr#` | `background: url('${1:url}') no-repeat ${0:#000000};` |
+| `bunr` | `background: url('${0:url}') no-repeat;` |
+| `bunr2#` | `background: url('${1:url}') no-repeat ${2:0} ${3:0} ${0:#000000};` |
 | `bunr2` | `background: url('${1:url}') no-repeat ${2:0} ${0:0};` |
 | `bunr2t` | `background: url('${1:url}') no-repeat ${2:0} ${0:0} transparent;` |
-| `bunr_` | `background: url('${1:url}') no-repeat ${0:#000000};` |
-| `bunr` | `background: url('${0:url}') no-repeat;` |
 | `bunrt` | `background: url('${1:url}') no-repeat transparent;` |
-| `burx2_` | `background: url('${1:url}') repeat-x ${2:0} ${3:0} ${0:#000000};` |
+| `burx#` | `background: url('${1:url}') repeat-x ${0:#000000};` |
+| `burx` | `background: url('${0:url}') repeat-x;` |
+| `burx2#` | `background: url('${1:url}') repeat-x ${2:0} ${3:0} ${0:#000000};` |
 | `burx2` | `background: url('${1:url}') repeat-x ${2:0} ${0:0};` |
 | `burx2t` | `background: url('${1:url}') repeat-x ${2:0} ${0:0} transparent;` |
-| `burx_` | `background: url('${1:url}') repeat-x ${0:#000000};` |
-| `burx` | `background: url('${0:url}') repeat-x;` |
 | `burxt` | `background: url('${1:url}') repeat-x transparent;` |
-| `bury2_` | `background: url('${1:url}') repeat-y ${2:0} ${3:0} ${0:#000000};` |
+| `bury#` | `background: url('${1:url}') repeat-y ${0:#000000};` |
+| `bury` | `background: url('${0:url}') repeat-y;` |
+| `bury2#` | `background: url('${1:url}') repeat-y ${2:0} ${3:0} ${0:#000000};` |
 | `bury2` | `background: url('${1:url}') repeat-y ${2:0} ${0:0};` |
 | `bury2t` | `background: url('${1:url}') repeat-y ${2:0} ${0:0} transparent;` |
-| `bury_` | `background: url('${1:url}') repeat-y ${0:#000000};` |
-| `bury` | `background: url('${0:url}') repeat-y;` |
 | `buryt` | `background: url('${1:url}') repeat-y transparent;` |
 | `but` | `background: url('${0:url}') transparent;` |
 | `bvh` | `backface-visibility: hidden;` |
@@ -384,20 +397,20 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `bw1` | `border-width: ${0:0};` |
 | `bwm` | `border-width: medium;` |
 | `bwt` | `border-width: ${1\|thick,thin\|};` |
+| `c#` | `color: ${0:#000000};` |
+| `c` | `content: '$0';` |
 | `c$1` | `calc($0)` |
 | `c2` | `columns: ${1:10px} ${0:1};` |
-| `c_` | `color: ${0:#000000};` |
-| `c` | `content: '$0';` |
 | `ca` | `clip: auto;` |
 | `ca` | `columns: auto;` |
 | `ca` | `content: attr($0);` |
 | `ca` | `cursor: ${1\|alias,auto\|};` |
 | `cas` | `cursor: all-scroll;` |
-| `cb$4` | `cubic-bezier(${1:0}, ${2:0}, ${3:1}, ${0:1})` |
 | `cb` | `clear: both;` |
-| `cc1` | `column-count: ${0:0};` |
+| `cb$4` | `cubic-bezier(${1:0}, ${2:0}, ${3:1}, ${0:1})` |
 | `cc` | `content: counter($0);` |
 | `cc` | `cursor: ${1\|cell,copy,crosshair\|};` |
+| `cc1` | `column-count: ${0:0};` |
 | `cca` | `column-count: auto;` |
 | `ccm` | `cursor: context-menu;` |
 | `ccq` | `content: close-quote;` |
@@ -406,8 +419,8 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `cer` | `cursor: ${1\|e-resize,ew-resize\|};` |
 | `cfa` | `column-fill: auto;` |
 | `cfb` | `column-fill: balance;` |
-| `cg1` | `column-gap: ${0:0};` |
 | `cg` | `cursor: ${1\|grab,grabbing\|};` |
+| `cg1` | `column-gap: ${0:0};` |
 | `cgn` | `column-gap: normal;` |
 | `ch` | `cursor: help;` |
 | `ci` | `counter-increment: ${0:i};` |
@@ -423,19 +436,19 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `cnr` | `cursor: ${1\|n-resize,ne-resize,nesw-resize,ns-resize,nw-resize,nwse-resize\|};` |
 | `coq` | `content: open-quote;` |
 | `cp` | `cursor: ${1\|pointer,progress\|};` |
-| `cr4` | `clip: rect(${1:0}, ${2:0}, ${3:0}, ${0:0});` |
 | `cr` | `clear: right;` |
 | `cr` | `counter-reset(${0:i});` |
-| `crc_` | `column-rule-color: ${0:#000000};` |
-| `crd1_` | `column-rule: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `crg1_` | `column-rule: groove ${1:0} ${0:#000000};` |
-| `crh1_` | `column-rule: hidden ${1:0} ${0:#000000};` |
-| `cri1_` | `column-rule: inset ${1:0} ${0:#000000};` |
-| `crn1_` | `column-rule: none ${1:0} ${0:#000000};` |
-| `cro1_` | `column-rule: outset ${1:0} ${0:#000000};` |
-| `crr1_` | `column-rule: ridge ${1:0} ${0:#000000};` |
+| `cr4` | `clip: rect(${1:0}, ${2:0}, ${3:0}, ${0:0});` |
+| `crc#` | `column-rule-color: ${0:#000000};` |
+| `crd1#` | `column-rule: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `crg1#` | `column-rule: groove ${1:0} ${0:#000000};` |
+| `crh1#` | `column-rule: hidden ${1:0} ${0:#000000};` |
+| `cri1#` | `column-rule: inset ${1:0} ${0:#000000};` |
+| `crn1#` | `column-rule: none ${1:0} ${0:#000000};` |
+| `cro1#` | `column-rule: outset ${1:0} ${0:#000000};` |
 | `crr` | `cursor: row-resize;` |
-| `crs1_` | `column-rule: solid ${1:0} ${0:#000000};` |
+| `crr1#` | `column-rule: ridge ${1:0} ${0:#000000};` |
+| `crs1#` | `column-rule: solid ${1:0} ${0:#000000};` |
 | `crsd` | `column-rule-style: ${1\|dashed,dotted,double\|};` |
 | `crsg` | `column-rule-style: groove;` |
 | `crsh` | `column-rule-style: hidden;` |
@@ -455,8 +468,8 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `ct` | `cursor: text;` |
 | `cu` | `content: url($0);` |
 | `cu` | `cursor: url($0);` |
-| `cw1` | `column-width: ${0:0};` |
 | `cw` | `cursor: wait;` |
+| `cw1` | `column-width: ${0:0};` |
 | `cwa` | `column-width: auto;` |
 | `cwr` | `cursor: w-resize;` |
 | `czi` | `cursor: zoom-in;` |
@@ -483,12 +496,12 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `dtrg` | `display: table-row-group;` |
 | `ech` | `empty-cells: hide;` |
 | `ecs` | `empty-cells: show;` |
+| `f2a` | `flex-basis: ${1:0} ${2:1} ${0:auto};` |
 | `f2A` | `font: ${1:1rem}/${0:1.3} Arial, sans-serif;` |
-| `f2CN` | `font: ${1:1rem}/${0:1.3} Courier New, monospace;` |
+| `f2CN` | `font: ${1:1rem}/${0:1.3} 'Courier New', monospace;` |
 | `f2G` | `font: ${1:1rem}/${0:1.3} Georgia, serif;` |
 | `f2T` | `font: ${1:1rem}/${0:1.3} Tahoma, sans-serif;` |
 | `f2V` | `font: ${1:1rem}/${0:1.3} Verdana, sans-serif;` |
-| `f2a` | `flex-basis: ${1:0} ${2:1} ${0:auto};` |
 | `fa` | `flex: auto;` |
 | `fb1` | `flex-basis: ${0:0};` |
 | `fba` | `flex-basis: auto;` |
@@ -496,23 +509,24 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `fdcr` | `flex-direction: column-reverse;` |
 | `fdr` | `flex-direction: row;` |
 | `fdrr` | `flex-direction: row-reverse;` |
+| `ff$1` | `font-format($0)` |
 | `ffA` | `font-family: Arial, sans-serif;` |
-| `ffCN` | `font-family: Courier New, monospace;` |
-| `ffG` | `font-family: Georgia, serif;` |
-| `ffT` | `font-family: Tahoma, sans-serif;` |
-| `ffV` | `font-family: Verdana, sans-serif;` |
 | `ffcn` | `flex-flow: column nowrap;` |
+| `ffCN` | `font-family: 'Courier New', monospace;` |
 | `ffcrn` | `flex-flow: column-reverse nowrap;` |
 | `ffcrw` | `flex-flow: column-reverse wrap;` |
 | `ffcrwr` | `flex-flow: column-reverse wrap-reverse;` |
 | `ffcw` | `flex-flow: column wrap;` |
 | `ffcwr` | `flex-flow: column wrap-reverse;` |
+| `ffG` | `font-family: Georgia, serif;` |
 | `ffrn` | `flex-flow: row nowrap;` |
 | `ffrrn` | `flex-flow: row-reverse nowrap;` |
 | `ffrrw` | `flex-flow: row-reverse wrap;` |
 | `ffrrwr` | `flex-flow: row-reverse wrap-reverse;` |
 | `ffrw` | `flex-flow: row wrap;` |
 | `ffrwr` | `flex-flow: row wrap-reverse;` |
+| `ffT` | `font-family: Tahoma, sans-serif;` |
+| `ffV` | `font-family: Verdana, sans-serif;` |
 | `fg1` | `flex-grow: ${0:1};` |
 | `fl` | `float: left;` |
 | `fn` | `float: none;` |
@@ -527,6 +541,7 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `fss` | `font-size: small;` |
 | `fsxl` | `font-size: ${1\|x-large,xx-large\|};` |
 | `fsxs` | `font-size: ${1\|x-small,xx-small\|};` |
+| `ft$1` | `font-tech($0)` |
 | `fvn` | `font-variant: normal;` |
 | `fvsc` | `font-variant: small-caps;` |
 | `fw1` | `font-weight: ${0:0};` |
@@ -539,17 +554,32 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `g1` | `gap: ${0:0};` |
 | `g2` | `gap: ${1:0} ${0:0};` |
 | `ga` | `grid-area: ${0:name};` |
+| `gce1` | `grid-column-end: ${0:0};` |
+| `gcea` | `grid-column-end: auto;` |
 | `gcg` | `grid-column-gap: ${0:0};` |
+| `gcs1` | `grid-column-start: ${0:0};` |
+| `gcsa` | `grid-column-start: auto;` |
+| `gre1` | `grid-row-end: ${0:0};` |
+| `grea` | `grid-row-end: auto;` |
 | `grg` | `grid-row-gap: ${0:0};` |
+| `grs1` | `grid-row-start: ${0:0};` |
+| `grsa` | `grid-row-start: auto;` |
 | `gt2` | `grid-template: $1 / $0;` |
 | `gta` | `grid-template-areas: $0;` |
+| `gtan` | `grid-template-areas: none;` |
 | `gtc1` | `grid-template-columns: ${0:0};` |
+| `gtcn` | `grid-template-columns: none;` |
+| `gtcs` | `grid-template-columns: subgrid;` |
 | `gtn` | `grid-template: none;` |
 | `gtr1` | `grid-template-rows: ${0:0};` |
+| `gtrn` | `grid-template-rows: none;` |
+| `gtrs` | `grid-template-rows: subgrid;` |
 | `h$3` | `hsl(${1:0}, ${2:100}%, ${0:50}%)` |
 | `h$4` | `hsla(${1:0}, ${2:100}%, ${3:50}%, ${0:1})` |
 | `h1` | `height: ${0:0};` |
 | `ha` | `height: auto;` |
+| `ia` | `isolation: auto;` |
+| `ii` | `isolation: isolate;` |
 | `jcc` | `justify-content: center;` |
 | `jce` | `justify-content: end;` |
 | `jcfe` | `justify-content: flex-end;` |
@@ -616,17 +646,17 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `o1` | `opacity: ${0:0};` |
 | `o1` | `order: ${0:1};` |
 | `oa` | `overflow: auto;` |
-| `oc_` | `outline-color: ${0:#000000};` |
-| `od1_` | `outline: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
-| `og1_` | `outline: groove ${1:0} ${0:#000000};` |
+| `oc#` | `outline-color: ${0:#000000};` |
+| `od1#` | `outline: ${1\|dashed,dotted,double\|} ${2:0} ${0:#000000};` |
+| `og1#` | `outline: groove ${1:0} ${0:#000000};` |
 | `oh` | `overflow: hidden;` |
-| `oi1_` | `outline: inset ${1:0} ${0:#000000};` |
+| `oi1#` | `outline: inset ${1:0} ${0:#000000};` |
 | `on` | `outline: none;` |
-| `oo1_` | `outline: outset ${1:0} ${0:#000000};` |
+| `oo1#` | `outline: outset ${1:0} ${0:#000000};` |
 | `oo1` | `outline-offset: ${0:0};` |
-| `or1_` | `outline: ridge ${1:0} ${0:#000000};` |
-| `os1_` | `outline: solid ${1:0} ${0:#000000};` |
+| `or1#` | `outline: ridge ${1:0} ${0:#000000};` |
 | `os` | `overflow: scroll;` |
+| `os1#` | `outline: solid ${1:0} ${0:#000000};` |
 | `osd` | `outline-style: ${1\|dashed,dotted,double\|};` |
 | `osg` | `outline-style: groove;` |
 | `osi` | `outline-style: inset;` |
@@ -667,10 +697,10 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `pen` | `pointer-events: none;` |
 | `pep` | `pointer-events: painted;` |
 | `pes` | `pointer-events: stroke;` |
+| `pev` | `pointer-events: visible;` |
 | `pevF` | `pointer-events: visibleFill;` |
 | `pevP` | `pointer-events: visiblePainted;` |
 | `pevS` | `pointer-events: visibleStroke;` |
-| `pev` | `pointer-events: visible;` |
 | `pf` | `position: fixed;` |
 | `pi1` | `padding-inline: ${0:0};` |
 | `pi2` | `padding-inline: ${1:0} ${0:0};` |
@@ -681,12 +711,12 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `pic` | `place-items: center;` |
 | `pice` | `place-items: center / end;` |
 | `pics` | `place-items: center / ${1\|start,stretch\|};` |
-| `pie1` | `padding-inline-end: ${0:0};` |
 | `pie` | `place-items: end;` |
+| `pie1` | `padding-inline-end: ${0:0};` |
 | `piec` | `place-items: end / center;` |
 | `pies` | `place-items: end / ${1\|start,stretch\|};` |
-| `pis1` | `padding-inline-start: ${0:0};` |
 | `pis` | `place-items: ${1\|start,stretch\|};` |
+| `pis1` | `padding-inline-start: ${0:0};` |
 | `pisc` | `place-items: ${1\|start,stretch\|} / center;` |
 | `pise` | `place-items: ${1\|start,stretch\|} / end;` |
 | `piss` | `place-items: ${1\|start / stretch,stretch / start\|};` |
@@ -702,9 +732,9 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `porb` | `perspective-origin: right bottom;` |
 | `porc` | `perspective-origin: right center;` |
 | `port` | `perspective-origin: right top;` |
-| `pr1` | `padding-right: ${0:0};` |
 | `pr` | `position: relative;` |
-| `ps` | `position: ${1\|static,sticky\|};` |
+| `pr1` | `padding-right: ${0:0};` |
+| `ps` | `position: ${1\|sticky,static\|};` |
 | `pt1` | `padding-top: ${0:0};` |
 | `q2` | `quotes: '${1:«}' '${0:»}';` |
 | `qn` | `quotes: none;` |
@@ -720,14 +750,72 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `rn` | `resize: none;` |
 | `rrg$` | `repeating-radial-gradient($0)` |
 | `rv` | `resize: vertical;` |
+| `s$1` | `selector($0)` |
+| `sba` | `scroll-behavior: auto;` |
+| `sbs` | `scroll-behavior: smooth;` |
+| `sga` | `scrollbar-gutter: auto;` |
+| `sgs` | `scrollbar-gutter: stable;` |
+| `sgsbe` | `scrollbar-gutter: stable both-edges;` |
+| `sm1` | `scroll-margin: ${0:0};` |
+| `sm2` | `scroll-margin: ${1:0} ${0:0};` |
+| `sm3` | `scroll-margin: ${1:0} ${2:0} ${0:0};` |
+| `sm4` | `scroll-margin: ${1:0} ${2:0} ${3:0} ${0:0};` |
+| `smb1` | `scroll-margin-block: ${0:0};` |
+| `smb1` | `scroll-margin-bottom: ${0:0};` |
+| `smb2` | `scroll-margin-block: ${1:0} ${0:0};` |
+| `smbe1` | `scroll-margin-block-end: ${0:0};` |
+| `smbs1` | `scroll-margin-block-start: ${0:0};` |
+| `smi1` | `scroll-margin-inline: ${0:0};` |
+| `smi2` | `scroll-margin-inline: ${1:0} ${0:0};` |
+| `smie1` | `scroll-margin-inline-end: ${0:0};` |
+| `smis1` | `scroll-margin-inline-start: ${0:0};` |
+| `sml1` | `scroll-margin-left: ${0:0};` |
+| `smr1` | `scroll-margin-right: ${0:0};` |
+| `smt1` | `scroll-margin-left: ${0:0};` |
+| `sp1` | `scroll-padding: ${0:0};` |
+| `sp2` | `scroll-padding: ${1:0} ${0:0};` |
+| `sp3` | `scroll-padding: ${1:0} ${2:0} ${0:0};` |
+| `sp4` | `scroll-padding: ${1:0} ${2:0} ${3:0} ${0:0};` |
+| `spb1` | `scroll-padding-block: ${0:0};` |
+| `spb1` | `scroll-padding-bottom: ${0:0};` |
+| `spb2` | `scroll-padding-block: ${1:0} ${0:0};` |
+| `spbe1` | `scroll-padding-block-end: ${0:0};` |
+| `spbs1` | `scroll-padding-block-start: ${0:0};` |
+| `spi1` | `scroll-padding-inline: ${0:0};` |
+| `spi2` | `scroll-padding-inline: ${1:0} ${0:0};` |
+| `spie1` | `scroll-padding-inline-end: ${0:0};` |
+| `spis1` | `scroll-padding-inline-start: ${0:0};` |
+| `spl1` | `scroll-padding-left: ${0:0};` |
+| `spr1` | `scroll-padding-right: ${0:0};` |
+| `spt1` | `scroll-padding-left: ${0:0};` |
+| `ssac` | `scroll-snap-align: center;` |
+| `ssae` | `scroll-snap-align: end;` |
+| `ssan` | `scroll-snap-align: none;` |
+| `ssas` | `scroll-snap-align: start;` |
+| `ssase` | `scroll-snap-align: start end;` |
+| `sssa` | `scroll-snap-stop: always;` |
+| `sssn` | `scroll-snap-stop: normal;` |
+| `sstb` | `scroll-snap-type: ${1\|block,both\|};` |
+| `sstbm` | `scroll-snap-type: ${1\|block,both\|} mandatory;` |
+| `sstbmp` | `scroll-snap-type: ${1\|block,both\|} proximity;` |
+| `ssti` | `scroll-snap-type: inline;` |
+| `sstim` | `scroll-snap-type: inline mandatory;` |
+| `sstimp` | `scroll-snap-type: inline proximity;` |
+| `sstn` | `scroll-snap-type: none;` |
+| `sstx` | `scroll-snap-type: x;` |
+| `sstxm` | `scroll-snap-type: x mandatory;` |
+| `sstxmp` | `scroll-snap-type: x proximity;` |
+| `ssty` | `scroll-snap-type: y;` |
+| `sstym` | `scroll-snap-type: y mandatory;` |
+| `sstymp` | `scroll-snap-type: y proximity;` |
 | `t1` | `top: ${0:0};` |
+| `ta` | `top: auto;` |
 | `ta1` | `transition: ${1:all} ${0:1}s;` |
 | `ta1e` | `transition: ${1:all} ${0:1}s ease;` |
 | `ta1ei` | `transition: ${1:all} ${0:1}s ease-in;` |
 | `ta1eio` | `transition: ${1:all} ${0:1}s ease-in-out;` |
 | `ta1eo` | `transition: ${1:all} ${0:1}s ease-out;` |
 | `ta1l` | `transition: ${1:all} ${0:1}s linear;` |
-| `ta` | `top: auto;` |
 | `tac` | `text-align: center;` |
 | `tacb1` | `transition: ${1:all} ${2:1}s cubic-bezier(${3:0}, ${4:0}, ${5:0}, ${0:0});` |
 | `taj` | `text-align: justify;` |
@@ -755,27 +843,24 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `tpa` | `transition-property: all;` |
 | `tpn` | `transition-property: none;` |
 | `tpp` | `transition-property: ${0:name};` |
-| `tr2` | `transform: rotate(${1:0}, ${2:0});` |
+| `tr1` | `transform: rotate(${0:0});` |
 | `tr34` | `transform: rotate3d(${1:0}, ${2:0}, ${3:0}, ${4:0});` |
 | `trx1` | `transform: rotateX(${0:0});` |
 | `try1` | `transform: rotateY(${0:0});` |
 | `trz1` | `transform: rotateZ(${0:0});` |
 | `ts1` | `tab-size: ${0:4};` |
-| `ts2_` | `text-shadow: ${1:0} ${2:0} ${0:#000000};` |
+| `ts2#` | `text-shadow: ${1:0} ${2:0} ${0:#000000};` |
 | `ts2` | `transform: ${1\|scale,skew\|}(${2:0}, ${0:0});` |
+| `ts3#` | `text-shadow: ${1:0} ${2:0} ${3:0} ${0:#000000};` |
 | `ts33` | `transform: scale3d(${1:0}, ${2:0}, ${0:0});` |
-| `ts3_` | `text-shadow: ${1:0} ${2:0} ${3:0} ${0:#000000};` |
-| `tsX1` | `transform: ${1\|scaleX,skewX\|}(${0:0});` |
-| `tsY1` | `transform: ${1\|scaleY,skewY\|}(${0:0});` |
-| `tsZ1` | `transform: scaleZ(${0:0});` |
 | `tsf` | `transform-style: flat;` |
 | `tsn` | `text-shadow: none;` |
 | `tsp3` | `transform-style: preserve-3d;` |
+| `tsX1` | `transform: ${1\|scaleX,skewX\|}(${0:0});` |
+| `tsY1` | `transform: ${1\|scaleY,skewY\|}(${0:0});` |
+| `tsZ1` | `transform: scaleZ(${0:0});` |
 | `tt2` | `transform: translate(${1:0}, ${0:0});` |
 | `tt33` | `transform: translate3d(${1:0}, ${2:0}, ${0:0});` |
-| `ttX1` | `transform: translateX(${0:0});` |
-| `ttY1` | `transform: translateY(${0:0});` |
-| `ttZ1` | `transform: translateZ(${0:0});` |
 | `ttc` | `text-transform: capitalize;` |
 | `ttfcb4` | `transition-timing-function: cubic-bezier(${1:0}, ${2:0}, ${3:0}, ${0:0});` |
 | `ttfe` | `transition-timing-function: ease;` |
@@ -786,6 +871,9 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `ttl` | `text-transform: lowercase;` |
 | `ttn` | `text-transform: none;` |
 | `ttu` | `text-transform: uppercase;` |
+| `ttX1` | `transform: translateX(${0:0});` |
+| `ttY1` | `transform: translateY(${0:0});` |
+| `ttZ1` | `transform: translateZ(${0:0});` |
 | `u$1` | `url('$0')` |
 | `ubbo` | `unicode-bidi: bidi-override;` |
 | `ube` | `unicode-bidi: embed;` |
@@ -826,32 +914,40 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 ### SCSS
 
 | Prefix | Snippet |
-| ------:| ------- |
-| `$1` | `\$${1:name}: ${0:null};` |
-| `$d1` | `\$${1:name}: ${0:null} !default;` |
-| `$g1` | `\$${1:name}: ${0:null} !global;` |
+| -----: | ------- |
+| `__` | `#{${0:$TM_SELECTED_TEXT}}` |
+| `_` | `${1:&} { $0 }` |
+| `_0_` | `~ ${1:*} { $0 }` |
+| `_1_` | `> ${1:*} { $0 }` |
+| `_a_` | `&:active { $0 }` |
+| `_c_` | `&:checked { $0 }` |
+| `_d_` | `&:disabled { $0 }` |
+| `_f_` | `&:focus { $0 }` |
+| `_h_` | `&:hover { $0 }` |
+| `_l_` | `&:link { $0 }` |
+| `_v_` | `&:visited { $0 }` |
 | `@ar_` | `@at-root$1 { $0 }` |
 | `@c1` | `@content;` |
 | `@d1` | `@debug ${0:message};` |
+| `@e_` | `@else { $0 }` |
 | `@e1` | `@error ${0:message};` |
 | `@e1` | `@extend ${0:name};` |
-| `@e_` | `@else { $0 }` |
 | `@ei_` | `@each ${1:\$item} in ${0:\$items} { }` |
 | `@ei_` | `@else if ${0:condition} { }` |
 | `@ein_` | `@else if not ${0:condition} { }` |
-| `@f1` | `@forward '$0';` |
 | `@f_` | `@function ${1:name} ($2) { $0 }` |
+| `@f1` | `@forward '$0';` |
 | `@fa1` | `@forward '$1' as ${0:*};` |
 | `@fft_` | `@for ${1:\$i} from ${2:1} through ${0:\$end} { }` |
 | `@fh1` | `@forward '$1' hide $0;` |
 | `@fs1` | `@forward '$1' show $0;` |
 | `@fw1` | `@forward '$1' with ($0);` |
-| `@i$` | `@include ${0:name}();` |
 | `@i_` | `@if ${0:condition} { }` |
 | `@i_` | `@include ${1:name}() { $0 }` |
+| `@i$` | `@include ${0:name}();` |
 | `@in_` | `@if not ${0:condition} { }` |
 | `@m_` | `@mixin ${1:name} ($2) { $0 }` |
-| `@r` | `@return $0;` |
+| `@r1` | `@return $0;` |
 | `@u1` | `@use '$0';` |
 | `@ua1` | `@use '$1' as ${0:*};` |
 | `@usc1` | `@use 'sass:color';` |
@@ -859,8 +955,11 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `@usm1` | `@use 'sass:${1\|map,math,meta\|}';` |
 | `@uss1` | `@use 'sass:${1\|selector,string\|}';` |
 | `@uw1` | `@use '$1' with ($0);` |
-| `@w1` | `@warn ${0:message};` |
 | `@w_` | `@while ${0:condition} { }` |
+| `@w1` | `@warn ${0:message};` |
+| `$1` | `\$${1:name}: ${0:null};` |
+| `$d1` | `\$${1:name}: ${0:null} !default;` |
+| `$g1` | `\$${1:name}: ${0:null} !global;` |
 | `ca$1` | `color.adjust(${0:\$color})` |
 | `ca$1` | `color.alpha(${0:\$color})` |
 | `cb$1` | `color.blackness(${0:\$color})` |
@@ -944,9 +1043,9 @@ Complete list of all CSS and SCSS snippets for Visual Studio Code. The rules for
 | `mmn` | `math.${1\|\$max-number,\$min-number\|}` |
 | `mmsi` | `math.${1\|\$max-safe-integer,\$min-safe-integer\|}` |
 | `mmv$1` | `meta.module-variables(${0:\$module})` |
+| `mp` | `math.\$pi` |
 | `mp$1` | `math.percentage(${0:\$number})` |
 | `mp$2` | `math.pow(${1:\$base}, ${0:\$exponent})` |
-| `mp` | `math.\$pi` |
 | `mr$1` | `math.random($0)` |
 | `mr$1` | `math.round(${0:\$number})` |
 | `mr$2` | `map.remove(${1:\$map}, ${0:\$key})` |

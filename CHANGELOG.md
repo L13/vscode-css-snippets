@@ -1,20 +1,23 @@
 # Change Log
 All notable changes to the "CSS and SCSS Snippets" extension will be documented in this file.
 
-## [0.18.0] - 2023-10-15
+## [0.18.0] - 2024-03-31
 
 ### Added
-- Added `_` for simple brace scope`{ ... }`.
-- Added `__` for sub brace scope`& { ... }`.
+- Added `_` for child brace scope `& { ... }`.
+- Added `__` for simple brace scope `#{}` in SCSS.
+- Added `#{clipboard}` and `#{selection}` for keyboard shortcut usage.
 - Added `grid` properties.
 - Added `writing-mode` property.
+- Added `isolation` property.
 - Added `block` and `inline` properties for `border`, `margin` and `padding`.
 - Added SCSS module functions.
 - Added `$1`, `$d1` and `$g1` for SCSS variable declaration.
 - Added `true`, `false` and `null` for SCSS.
 
 ### Changed
-- Simplified SCSS include
+- Changed prefix for color from `_` to `#`.
+- Simplified SCSS include.
 - Strings are always single quote.
 - Some fixes and clean up like simplified font.
 - Eliminated a lot of duplicated prefixes with value selection.

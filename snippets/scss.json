@@ -1,4 +1,21 @@
 {
+	
+	"#{clipboard}":									{ "prefix": "",			"body": ["#{$CLIPBOARD$0}"], "description": "" },
+	"#{selection}":									{ "prefix": "__",		"body": ["#{${0:$TM_SELECTED_TEXT}}"], "description": "" },
+	
+	"& {}":											{ "prefix": "_",		"body": ["${1:&} {", "\t$0", "}"], "description": "" },
+	
+	"&:active {}":									{ "prefix": "_a_",		"body": ["&:active {", "\t$0", "}"], "description": "" },
+	"&:checked {}":									{ "prefix": "_c_",		"body": ["&:checked {", "\t$0", "}"], "description": "" },
+	"&:disabled {}":								{ "prefix": "_d_",		"body": ["&:disabled {", "\t$0", "}"], "description": "" },
+	"&:focus {}":									{ "prefix": "_f_",		"body": ["&:focus {", "\t$0", "}"], "description": "" },
+	"&:hover {}":									{ "prefix": "_h_",		"body": ["&:hover {", "\t$0", "}"], "description": "" },
+	"&:link {}":									{ "prefix": "_l_",		"body": ["&:link {", "\t$0", "}"], "description": "" },
+	"&:visited {}":									{ "prefix": "_v_",		"body": ["&:visited {", "\t$0", "}"], "description": "" },
+	
+	"~ {}":											{ "prefix": "_0_",		"body": ["~ ${1:*} {", "\t$0", "}"], "description": "" },
+	"> {}":											{ "prefix": "_1_",		"body": ["> ${1:*} {", "\t$0", "}"], "description": "" },
+	
 	"null":											{ "prefix": "n",		"body": ["null"], "description": "" },
 	"false":										{ "prefix": "f",		"body": ["false"], "description": "" },
 	"true":											{ "prefix": "t",		"body": ["true"], "description": "" },
@@ -23,7 +40,7 @@
 	"@content;":									{ "prefix": "@c1",		"body": ["@content;"], "description": "" },
 	"@extend ;":									{ "prefix": "@e1",		"body": ["@extend ${0:name};"], "description": "" },
 	
-	"@return ;":									{ "prefix": "@r",		"body": ["@return $0;"], "description": "" },
+	"@return ;":									{ "prefix": "@r1",		"body": ["@return $0;"], "description": "" },
 	
 	"@debug;":										{ "prefix": "@d1",		"body": ["@debug ${0:message};"], "description": "" },
 	"@warn;":										{ "prefix": "@w1",		"body": ["@warn ${0:message};"], "description": "" },
