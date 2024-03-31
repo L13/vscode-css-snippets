@@ -1,30 +1,25 @@
 //	Imports ____________________________________________________________________
 
-import * as vscode from 'vscode';
+const del = require('del');
 
-import * as functions from './commands/functions';
+const { GulpTasks } = require('./plugins/gulp-tasks');
 
 //	Variables __________________________________________________________________
 
-
+const tasks = new GulpTasks({ paths: 'tasks/**/*.@(js|json)' });
 
 //	Initialize _________________________________________________________________
 
-
+tasks.build([clean, 'scripts', 'tests', 'docs']);
 
 //	Exports ____________________________________________________________________
 
-export function activate (context: vscode.ExtensionContext) {
-	
-	functions.activate(context);
-	
-}
 
-export function deactivate () {
-	
-	//
-	
-}
 
 //	Functions __________________________________________________________________
 
+function clean () {
+	
+	return del(['out', 'test']);
+	
+}

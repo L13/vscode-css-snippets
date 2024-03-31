@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es2020",
-		"lib": ["es2020"],
-		"outDir": "out",
-		"sourceMap": true,
+		"moduleResolution": "Node",
+		"target": "es6",
+		"lib": [
+			"es6"
+		],
 		"noEmitOnError": false,
 		"removeComments": true,
 		"noImplicitAny": true,
@@ -14,8 +14,7 @@
 		"strictNullChecks": false,
 		"strictFunctionTypes": true,
 		"strictPropertyInitialization": false,
-		"allowSyntheticDefaultImports": true,
-		"rootDir": "src"
+		"allowSyntheticDefaultImports": true
 	},
 	"exclude": [
 		"snippets",

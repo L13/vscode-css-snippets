@@ -2,7 +2,7 @@
 
 import * as vscode from 'vscode';
 
-import * as functions from './commands/functions';
+import type { Dictionary } from '../types';
 
 //	Variables __________________________________________________________________
 
@@ -14,15 +14,11 @@ import * as functions from './commands/functions';
 
 //	Exports ____________________________________________________________________
 
-export function activate (context: vscode.ExtensionContext) {
-	
-	functions.activate(context);
-	
-}
+export function register (context: vscode.ExtensionContext, commands: Dictionary<(...args: any) => void>) {
 
-export function deactivate () {
-	
-	//
+	for (const [command, callback] of Object.entries(commands)) {
+		context.subscriptions.push(vscode.commands.registerCommand(command, callback));
+	}
 	
 }
 
