@@ -134,20 +134,19 @@ __The following prefixes are just examples to explain the rules.__ To see the co
 | ------: | ------- |
 | `@e1`   | <b>@e</b>xtend NAME; |
 
-### 6. A SassScript expression uses an underscore "\_".
+### 6. A SassScript expression uses two underscores "\_\_".
 
 See also [Recommended Keyboard Shortcuts](#recommended-keyboard-shortcuts).
 
 | Prefix  | Snippet |
 | ------: | ------- |
-| `_`     | #<b>{</b> ... <b>}</b> |
+| `__`    | #<b>{</b> ... <b>}</b> |
 
 ### 7. A child scope starts with an underscore "\_".
 
 | Prefix  | Snippet |
 | ------: | ------- |
-| `_`     | #<b>{</b> ... <b>}</b> |
-| `__`    | & <b>{</b> ... <b>}</b> |
+| `_`     | & <b>{</b> ... <b>}</b> |
 | `_h_`   | &:hover <b>{</b> ... <b>}</b> |
 | `_0_`   | ~ * <b>{</b> ... <b>}</b> |
 | `_1_`   | > * <b>{</b> ... <b>}</b> |
